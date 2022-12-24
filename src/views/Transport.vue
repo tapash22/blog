@@ -91,6 +91,11 @@ export default {
                 }
             ]
         }
+    },
+    methods:{
+        save(){
+            this.$router.push('/bus');
+        }
     }
 }
 </script>
