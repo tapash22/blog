@@ -1,6 +1,6 @@
 <template>
     <div class="the-footer">
-        <v-footer class="d-block">
+        <v-footer class="d-block ma-0 pa-0">
             <div class="bg-red-darken-2 w-100 d-flex px-4">
 
                 <div class="d-block pa-5 w-2/3">

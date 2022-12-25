@@ -17,27 +17,27 @@
                                 {{ datail }}
                             </v-chip>
                         </v-card-text>
-                        <v-card-text class="d-flex justify-start w-50">
-                            <v-text-field variant="outlined" density="compact"  v-model="dayCount">
-
-                            </v-text-field>
-                            <V-btn color="red" elevation="2" class="white--text text-h6 w-75"  @click="addDay()">
-                                Day Count
-                            </V-btn>
-                        </v-card-text>
+                     
                         <v-card-text class="mx-2 pa-0">
-                            
+
                             <h3 class="text-h6 pa-0 ml-3">Information:</h3>
-                        
+
                             <p class="pa-2 mx-2 text-body-1 text-justify">
                                 {{ room.breif }}
                             </p>
                         </v-card-text>
-                        <v-card-action class="d-flex justify-center">
-                            <v-btn elevation="5" class="my-5">
+                        <v-card-text-actions class="d-flex justify-start w-100">
+                            <Datepicker v-model="date" range week-start="0" calendar-cell-class-name="dp-custom-cell"
+                                :auto-position="true" class="my-2 pa-2 mx-0 w-75 " placeholder="select date">
+                            </Datepicker>
+                            <v-btn class="text-h6 d-flex justify-center w-25 my-4 mr-2 bg-red" 
+                                @click="onSearch">
                                 check-Out
                             </v-btn>
-                        </v-card-action>
+                           
+                        </v-card-text-actions>
+                        <v-card-subtitle class="my-5 text-center text-body-1 text-red text-uppercase">welcome to our service</v-card-subtitle>
+                     
                     </v-card>
                 </v-col>
             </v-row>
@@ -47,18 +47,21 @@
 </template>
 
 <script>
+import Datepicker from '@vuepic/vue-datepicker';
+import '@vuepic/vue-datepicker/dist/main.css'
+
 export default {
     name: 'hotelroom',
     data() {
         return {
             id: this.$route.params.room_id,
-            dayCount:1,
+            date: '',
             rooms: [
                 {
                     id: 1,
                     r_name: 'Couple Room',
                     w_room: '1',
-                    breif:'this room is very beautiful.there have south-face window and see view face.this room have one shoure with gizer and also have steam bath.for more deatil you can call given number and clear your confution.',
+                    breif: 'this room is very beautiful.there have south-face window and see view face.this room have one shoure with gizer and also have steam bath.for more deatil you can call given number and clear your confution.',
                     datails: ['south-face', 'Led TV', 'Fridze', 'Drawing', 'single-bed', 'room-service', 'Aircondition'],
                     image: [],
                     rent: 44.0,
@@ -107,12 +110,15 @@ export default {
             ]
         }
     },
-    methods:{
-        addDay(e){
-            if(this.dayCount === e){
+    components: {
+        Datepicker
+    },
+    methods: {
+        addDay(e) {
+            if (this.dayCount === e) {
                 console.log(this.dayCount);
-            }else{
-                this.dayCount ++;
+            } else {
+                this.dayCount++;
                 console.log(this.dayCount);
             }
         }

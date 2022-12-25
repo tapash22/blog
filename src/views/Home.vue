@@ -112,6 +112,11 @@
                     </v-sheet>
                 </v-col>
             </v-row>
+            <v-row>
+                <v-col>
+                    {{ name }}
+                </v-col>
+            </v-row>
         </v-container>
 
     </div>
@@ -182,6 +187,15 @@ export default {
             }
             this.value += 1
         }, 100)
+    },
+    computed:{
+        // ...mapState('hotel',{
+        //     name:'name'
+        // }),
+        getName(){
+        //    return this.$store.state.name;
+        return this.$store.state.buss.name;
+        }
     },
     // computed:{
     //     textInputOptions(){

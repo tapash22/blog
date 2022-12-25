@@ -11,7 +11,7 @@
                         <div class="d-flex w-100">
                             <v-card-text class="d-block ">
                                 <div class="d-flex justify-center my-5" v-for="sit in sitLeft" :key="sit.id">
-                                    <v-btn class="mx-2" :class="clicked ? 'bg-white' : 'bg-red'" :color="red"
+                                    <v-btn class="mx-2" id="" :class="clicked ? 'bg-white' : 'bg-red'" :color="red"
                                         @click="clickB(sit.id)">{{
                                                 sit.name1
                                         }}</v-btn>
@@ -69,132 +69,50 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
     name: 'bus',
     data() {
         return {
-            sitLeft: [
-                {
-                    id: 1,
-                    name1: 'A1',
-                    name2: 'A2'
-                },
-                {
-                    id: 2,
-                    name1: 'B1',
-                    name2: 'B2'
-                },
-                {
-                    id: 3,
-                    name1: 'C1',
-                    name2: 'C2'
-                },
-                {
-                    id: 4,
-                    name1: 'D1',
-                    name2: 'D2'
-                },
-                {
-                    id: 5,
-                    name1: 'E1',
-                    name2: 'E2'
-                },
-                {
-                    id: 6,
-                    name1: 'F1',
-                    name2: 'F2'
-                },
-                {
-                    id: 7,
-                    name1: 'F1',
-                    name2: 'F2'
-                },
-            ],
-            sitRight: [
-                {
-                    id: 1,
-                    name1: 'A3',
-                    name2: 'A4'
-                },
-                {
-                    id: 2,
-                    name1: 'B3',
-                    name2: 'B4'
-                },
-                {
-                    id: 3,
-                    name1: 'C3',
-                    name2: 'C4'
-                },
-                {
-                    id: 4,
-                    name1: 'D3',
-                    name2: 'D4'
-                },
-                {
-                    id: 5,
-                    name1: 'E3',
-                    name2: 'E4'
-                },
-                {
-                    id: 6,
-                    name1: 'F3',
-                    name2: 'F4'
-                },
-                {
-                    id: 7,
-                    name1: 'F3',
-                    name2: 'F4'
-                },
-            ],
+           
             price: 1500,
             clicked: true,
-            tickets: [
-                {
-                    id: 1,
-                    sit_name: 'A1',
-                    price: 1500,
-                    date: new Date(),
-                    time: '10.00'
-                },
-                {
-                    id: 2,
-                    sit_name: 'A2',
-                    price: 1500,
-                    date: new Date(),
-                    time: '10.00'
-                },
-            ]
+         
         }
+    },
+    computed:{
+        ...mapState('buss',{
+            tickets:'tickets',
+            sitLeft:'sitLeft',
+            sitRight:'sitRight'
+        })
     },
     methods:{
         clickB(id){
-            console.log(id);
             switch(id){
                 case 1:
-                    this.clicked =false;
+                    console.log('swicher'+id);
                     break;
                     case 2:
-                    this.clicked =false;
+                    console.log('swicher'+id);
                     break;
                     case 3:
-                    this.clicked =false;
+                    console.log('swicher'+id);
                     break;
                       case 4:
-                    this.clicked =false;
+                      console.log('swicher'+id);
                     break;
                       case 5:
-                    this.clicked =false;
+                      console.log('swicher'+id);
                     break;
                       case 6:
-                    this.clicked =false;
+                      console.log('swicher'+id);
                     break;
                       case 7:
-                    this.clicked =false;
+                      console.log('swicher'+id);
                     break;
-                      case 1:
-                    this.clicked =false;
-                    break;
+             
 
             }
 

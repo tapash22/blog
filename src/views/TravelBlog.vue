@@ -7,9 +7,9 @@
                     <v-card>
                         <v-card-item class="h-80">
                             <video width="350" height="200" controls>
-                                <source src='../assets/video2.mp4' type="video/mp4">
+                                <source src='../assets/video.mp4' type="video/mp4">
                             </video>
-                            <!-- <v-img class="w-100 pa-2 h-100" :src="tour.image" /> -->
+                            <v-img class="w-100 pa-2 h-100" :src='require(`../assets/${tour.image}`)'/>
                         </v-card-item>
                         <v-card-text class="h-20">
                             <v-card-title>{{ tour.name }}</v-card-title>
@@ -29,70 +29,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
     name: 'trave-lblog',
 
-    data() {
-        return {
-            tours: [
-                {
-                    id: 1,
-                    name: 'travaling to cox bazzer',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-
-                {
-                    id: 2,
-                    name: 'travaling to jaflong',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 3,
-                    name: 'travaling to Bandorbon',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 4,
-                    name: 'travaling to sundorbon',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 5,
-                    name: 'travaling to cox bazzer',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-
-                {
-                    id: 6,
-                    name: 'travaling to jaflong',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 7,
-                    name: 'travaling to Bandorbon',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 8,
-                    name: 'travaling to sundorbon',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 9,
-                    name: 'travaling to Borisal',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-            ]
-        }
+    computed:{
+        ...mapState('tour',{
+            tours:'tours'
+        })
     },
     mounted() {
         window.scrollTo(0, 0);

@@ -14,12 +14,17 @@
                     <h2 class="my-1 text-h6">{{ slider.name }}</h2>
                     <v-slider v-model="slider.slider" :step="slider.step" class="align-center" :max="slider.max" :min="slider.min" hide-details>
                         <template v-slot:append>
-                            <v-text-field v-model="slider.slider" hide-details class="mt-0 pt-0"
+                            <v-text-field v-model="slider.slider" variant="outlined" hide-details class="mt-0 pt-0"
                 single-line type="number"
-                                style="width: 70px"></v-text-field>
+                                style="width: 90px"></v-text-field>
                         </template>
                     </v-slider>
                 </v-list-item>
+                <v-list-item-action class="my-5 d-flex justify-center">
+                    <v-btn color="red" @click="drawer=false">
+                        filter
+                    </v-btn>
+                </v-list-item-action>
             </v-list>
 
         </v-navigation-drawer>

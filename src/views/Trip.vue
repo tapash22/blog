@@ -16,7 +16,7 @@
 
                         <v-card-title>{{ hotel.name }}</v-card-title>
                         <v-card-subtitle>price: ${{ hotel.price }}</v-card-subtitle>
-                        <v-rating dense v-model="rating" background-color="purple lighten-3" color="purple" size="20" class="mx-5"></v-rating>
+                        <v-rating dense v-model="hotel.rating" background-color="purple lighten-3" color="purple" size="20" class="mx-5"></v-rating>
                         <v-divider class="mt-3"></v-divider>
                         <v-card-text>
                             <v-list>
@@ -34,57 +34,19 @@
 </template>
 
 <script>
+import { mapState} from 'vuex';
+
 export default {
     name: 'trip',
     data() {
         return {
             date: '12/21/2022',
-            rating:4,
-            hotels: [
-                {
-                    id: 1,
-                    name: 'hotel name',
-                    image: '../assets/bus1.png',
-                    price: 44,
-                    lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
-                },
-                {
-                    id: 2,
-                    name: 'hotel name',
-                    image: '../assets/bus1.png',
-                    price: 44,
-                    lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
-                },
-                {
-                    id: 3,
-                    name: 'hotel name',
-                    image: '../assets/bus1.png',
-                    price: 44,
-                    lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
-                },
-                {
-                    id: 4,
-                    name: 'hotel name',
-                    image: '../assets/bus1.png',
-                    price: 44,
-                    lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
-                },
-                {
-                    id: 5,
-                    name: 'hotel name',
-                    image: '../assets/bus1.png',
-                    price: 44,
-                    lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
-                },
-                {
-                    id: 6,
-                    name: 'hotel name',
-                    image: '../assets/bus1.png',
-                    price: 44,
-                    lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
-                },
-            ]
         }
+    },
+    computed:{
+        ...mapState('hotel',{
+            hotels: 'hotels'
+        })
     }
 }
 </script>
