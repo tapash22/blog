@@ -1,6 +1,6 @@
 <template>
     <div class="the-navigation">
-        <v-app-bar app sm="12" md="12" cols="12">
+        <v-app-bar  sm="12" md="12" cols="12" xl="12" xs="12" >
             <v-app-bar-title class="text-red"><router-link to="/home"
                     class="text-decoration-none text-red">Blog</router-link></v-app-bar-title>
             <v-spacer></v-spacer>
@@ -13,11 +13,7 @@
                     </v-btn>
                 </template>
                 <MIniCard :item="item "/>
-                <!-- <v-list>
-                    <v-list-item v-for="(item, index) in item" :key="index">
-                        <v-list-item-title>{{ item.title }}</v-list-item-title>
-                    </v-list-item>
-                </v-list> -->
+             
             </v-menu>
             <v-app-bar-nav-icon class="text-red" @click="drawer = !drawer"></v-app-bar-nav-icon>
         </v-app-bar>

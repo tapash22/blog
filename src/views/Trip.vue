@@ -10,23 +10,7 @@
             </v-row>
             <v-row v-if="hotels">
                 <v-col cols="12" md="4" sm="6" lg="4" xl="4" v-for="hotel in hotels" :key="hotel.id">
-                    <v-card elevation="10" rounded="lg">
-
-                        <v-img width="380" height="200" src="../assets/bus1.png" class="pa-2" />
-
-                        <v-card-title>{{ hotel.name }}</v-card-title>
-                        <v-card-subtitle>price: ${{ hotel.price }}</v-card-subtitle>
-                        <v-rating dense v-model="hotel.rating" background-color="purple lighten-3" color="purple"
-                            size="20" class="mx-5"></v-rating>
-                        <v-divider class="mt-3"></v-divider>
-                        <v-card-text>
-                            <v-list>
-                                <v-list-item v-for="list in hotel.lists" :key="list">
-                                    <v-list-item-title>{{ list }}</v-list-item-title>
-                                </v-list-item>
-                            </v-list>
-                        </v-card-text>
-                    </v-card>
+                    <SingelHotel :hotel="hotel"/>
                 </v-col>
             </v-row>
 
@@ -36,6 +20,7 @@
 
 <script>
 import { mapState } from 'vuex';
+import SingelHotel from '../components/SingelHotel.vue';
 
 export default {
     name: 'trip',
@@ -48,6 +33,9 @@ export default {
         ...mapState('hotel', {
             hotels: 'hotels'
         })
+    },
+    components:{
+        SingelHotel
     }
 }
 </script>

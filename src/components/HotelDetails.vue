@@ -21,14 +21,24 @@
                         </v-card-text>
 
                         <v-card-text class="bg-red ">
+                            <v-row>
+                                <v-col cols="6" sm="6" md="12" lg="12" xl="12">
+                                    <v-chip icon class="d-flex justify-start bg-red mx-2 text-h6" v-for="info in h_info"
+                                        :key="info.id">
+                                        <v-icon left class="white--text mx-2">
+                                            mdi-{{ info.icon }}
+                                        </v-icon>
+                                        {{ info.info }}
+                                    </v-chip>
+                                </v-col>
+                                <v-col cols="6" sm="6" md="12" lg="12" xl="12">
+                                    <v-rating v-model="rating" size="20" readonly class="mx-5 my-2"
+                                        color="white"></v-rating>
+                                </v-col>
+                            </v-row>
                             <div class="d-flex justify-space-between pa-0">
-                                <v-chip icon class="d-flex justify-start bg-red mx-2 text-h6">
-                                    <v-icon left class="white--text mx-2">
-                                        mdi-phone
-                                    </v-icon>
-                                    +8801600000000
-                                </v-chip>
-                                <v-chip icon class="d-flex justify-start bg-red mx-2 text-h6">
+
+                                <!-- <v-chip icon class="d-flex justify-start bg-red mx-2 text-h6">
                                     <v-icon left class="white--text mx-2">
                                         mdi-facebook
                                     </v-icon>
@@ -39,10 +49,10 @@
                                         mdi-email-open-outline
                                     </v-icon>
                                     hotel@gmail.com
-                                </v-chip>
+                                </v-chip> -->
                             </div>
 
-                            <v-rating v-model="rating" size="20" readonly class="mx-5 my-2" color="white"></v-rating>
+
 
                         </v-card-text>
                         <v-card-text class="pa-0">
@@ -62,32 +72,13 @@
                             </v-btn>
                         </v-card-acton>
                         <v-card-text class="w-100 h-50 pa-2 my-2 " v-if="rooms">
-                            <v-list class="d-flex ">
+                            <v-row>
+                                <v-col cols="12" sm="12" md="6" lg="6" xl="6" v-for="h_room in h_rooms"
+                                    :key="h_room.id">
+                                  <HotelRoom :h_room="h_room" />
+                                </v-col>
+                            </v-row>
 
-                                <v-list-item class="w-50" elevation="10" v-for="h_room in h_rooms" :key="h_room.id">
-                                    <v-list-item-title class="text-h5 text-red text-center pa-2">{{ h_room.room_name
-                                    }}</v-list-item-title>
-                                    <v-img class="w-100 h-50" src="../assets/hotel2.jpg" />
-                                    <div class="d-flex justify-center pa-2">
-                                        <v-chip icon v-for="chipe in h_room.chipes" :key="chipe"
-                                            class="mx-2 d-flex justify-space-evenly  text-body-2 bg-red-darken-1 "
-                                            color="white">
-                                            <v-icon right class="">
-                                                mdi-{{ chipe.icon }}
-                                            </v-icon>
-                                            {{ chipe.room_n }}
-                                        </v-chip>
-                                    </div>
-                                    <v-divider></v-divider>
-                                    <router-link :to="{ name: 'hotelroom', params: { room_id: h_room.id } }"
-                                        class="text-decoration-none offset-3">
-                                        <v-btn class="my-5 text-white text-h6 w-50" rounded="sm" color="red">
-                                            Details
-                                        </v-btn>
-                                    </router-link>
-
-                                </v-list-item>
-                            </v-list>
                         </v-card-text>
                     </v-card>
 
@@ -99,6 +90,7 @@
 </template>
 
 <script>
+import HotelRoom from './HotelRoom.vue';
 export default {
     name: 'hoteldetails',
     data() {
@@ -124,6 +116,18 @@ export default {
                     step: 1
                 },
 
+            ],
+            h_info: [
+                {
+                    id: 1,
+                    icon: 'phone',
+                    info: '+8801600000000'
+                },
+                {
+                    id: 2,
+                    icon: 'email-open-outline',
+                    info: 'email@gmail.com'
+                }
             ],
             h_rooms: [
                 {
@@ -180,6 +184,9 @@ export default {
             ]
 
         }
+    },
+    components:{
+        HotelRoom,
     }
 }
 </script>

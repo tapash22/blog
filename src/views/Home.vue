@@ -8,7 +8,7 @@
         <v-container>
             <v-row class="w-100 d-block">
                 <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center my-5">
-                    <v-sheet elevation="10" class="pa-2 w-75 h-75 d-block justify-center mt-10 bg-white" rounded="lg">
+                    <v-sheet class="pa-2 w-75 h-25 d-block justify-center mt-10 bg-white" rounded="lg">
                         <h2 class="pp text-center mt-2 text-red">Round Trip</h2>
                         <Datepicker v-model="date" range week-start="0" calendar-cell-class-name="dp-custom-cell"
                             :auto-position="true" class="my-2 pa-2 mx-0 " placeholder="select date"></Datepicker>
@@ -16,73 +16,29 @@
                             @click="onSearch">
                             search
                         </v-btn>
-                        <v-img class="w-100 h-50" src="https://i.ibb.co/Qb75K1p/bus1-removebg-preview.jpg" />
                     </v-sheet>
 
                 </v-col>
-
-                <v-col cols="12" lg="12" md="12" sm="12" xl="12">
-                    <v-card class="mx-5 my-5" elevation="10" rounded="lg">
-                        <v-card-title class="p bg-red-lighten-1 ">Recent tour</v-card-title>
-                        <v-divider></v-divider>
-                        <v-card-text class="d-flex">
-                            <v-list  v-for="tour in tours" :key="tour.id">
-                                <v-list-item class="d-block w-1/3"  >
-                                    <template v-slot:prepend>
-                                        <v-img width="100" height="100" :src="tour.image" />
-                                    </template>
-
-                                    <v-list-item-content two class="mx-2">
-                                        <v-list-item-title>{{ tour.name }}</v-list-item-title>
-                                        <v-list-item-subtitle>{{ tour.date }}</v-list-item-subtitle>
-                                    </v-list-item-content>
-                                    <v-divider></v-divider>
-
-                                </v-list-item>
-
-                            </v-list>
-                        </v-card-text>
-                        <v-card-actions class="d-flex justify-center bg-red">
-                            <v-btn elevation="6" class="bg-red w-100 p2" @click="viewAll">View all</v-btn>
-                        </v-card-actions>
-                    </v-card>
+            </v-row>
+            <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg" elevation="1">
+                <v-card-title class=" text-red-lighten-1 text-h5">Recent tour</v-card-title>
+                <v-btn elevation="6" class="bg-red" @click="viewAll">View all</v-btn>
+            </v-sheet>
+            <v-row class="w-100 d-flex justify-center my-5">
+                <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="tour in tours" :key="tour.id">
+                    <TourDetails :tour="tour" />
                 </v-col>
             </v-row>
 
-            <h2 class="text-center my-2 w-50 offset-3 rounded-lg pp">Package</h2>
+            <v-sheet class="w-100 h-25 d-flex justify-center my-5 pa-2" rounded="lg" elevation="1">
+                <h2 class="text-h4">Package</h2>
+            </v-sheet>
+
             <!-- <v-divider class="w-25 bg-red offset-4"></v-divider> -->
 
-            <v-row>
+            <v-row class="my-5">
                 <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="packages in packagess" :key="packages.id">
-                    <v-card elevation="10" rounded="lg">
-
-                        <v-card-title class="h-5 w-100 bg-red text-center">
-                            {{ packages.name }}
-                        </v-card-title>
-
-                        <v-card-text class="my-2">
-                            <div class="d-flex justify-center align-center">
-                                <v-avatar size="64" class=" pa-2 bg-red">
-                                    <v-icon class="text-h4 text-weight-bold icon" color="white">
-                                        mdi-{{ packages.icon }}
-                                    </v-icon>
-                                </v-avatar>
-                            </div>
-                            <div class="d-flex justify-center">
-                                <p class="text-h6 text-weight-bold text-justify my-5 mx-5">
-                                    {{ packages.des }}
-                                </p>
-                            </div>
-                        </v-card-text>
-
-                        <v-card-actions class="d-flex justify-center my-5 mx-5 bg-red rounded-lg">
-                            <v-btn v-bind="props" elevation="10" color="red" @click="getPage(packages.id)"
-                                class="w-100 text-weight-bold rounded-lg text-h6 bg-white">
-                                Details
-                            </v-btn>
-
-                        </v-card-actions>
-                    </v-card>
+                 <PackageDetails :packages="packages"/>
                 </v-col>
 
                 <v-col cols="12" md="4" lg="4" xl="4" sm="12" class="pa-10">
@@ -105,6 +61,8 @@
 
 <script>
 import TheSlider from '../components/TheSlider.vue';
+import PackageDetails from '../components/PackageDetails.vue';
+import TourDetails from '../components/TourDetils.vue';
 import Datepicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 import { mapState } from 'vuex';
@@ -137,7 +95,9 @@ export default {
     },
     components: {
         TheSlider,
-        Datepicker
+        Datepicker,
+        TourDetails,
+        PackageDetails
     },
 
     methods: {

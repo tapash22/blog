@@ -1,25 +1,28 @@
 <template>
     <div class="the-footer">
         <v-footer class="d-block ma-0 pa-0">
-            <div class="bg-red-darken-2 w-100 d-flex px-4 d-smAndDown-block">
+            <v-row class="d-flex w-100 bg-red-darken-2">
+                <v-col cols="12" sm="12" lg="8" md="8" xl="8">
+                    <div class="d-block pa-5">
+                        <strong class="text-h4 text-weight-lg">Introduce Your Journey</strong>
+                        <p class="text-justify text-body1 my-5">Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit.
+                            Rem modi saepe
+                            placeat amet in sed praesentium tempora nisi. Dolorum illum tenetur aut exercitationem sunt
+                            iure
+                            numquam hic.
+                            Corrupti, tempore deleniti.</p>
+                    </div>
+                </v-col>
 
-                <div class="d-block pa-5 w-2/3 ">
-                    <strong class="text-h4 text-weight-lg">Introduce Your Journey</strong>
-                    <p class="text-justify text-body1 my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem modi saepe
-                        placeat amet in sed praesentium tempora nisi. Dolorum illum tenetur aut exercitationem sunt iure numquam hic.
-                        Corrupti, tempore deleniti.</p>
-                </div>
+                <v-col cols="12" sm="12" lg="4" md="4" xl="4">
+                    <div class=" d-flex justify-center align-center">
+                        <v-btn v-for="icon in icons" :key="icon" class="mx-1 bg-white my-1 mx-smAndDown-3" color="red" :icon="icon"
+                            size="large"></v-btn>
+                    </div>
+                </v-col>
 
-                <div class="w-1/3 pa-3 d-flex mt-10">
-                    <v-btn v-for="icon in icons" :key="icon" class="mx-1 bg-white my-1" color="red" :icon="icon" 
-                        size="large"></v-btn>
-                </div>
-
-            </div>
-
-            <div class="px-4 py-2 bg-red text-center text-h6 w-100">
-                {{ new Date().getFullYear() }} <strong>Blog</strong>
-            </div>
+            </v-row>
         </v-footer>
     </div>
 </template>

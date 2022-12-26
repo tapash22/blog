@@ -65,13 +65,15 @@ const TourInformation = {
                     id: 1,
                     name: 'Transport',
                     des: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt, ',
-                    icon: 'train-car'
+                    icon: 'train-car',
+                    link:'/transport'
                 },
                 {
                     id: 2,
                     name: 'Hotel',
                     des: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt, ',
-                    icon: 'home-city-outline'
+                    icon: 'home-city-outline',
+                    link:'/hotel'
                 },
             ]
         }
