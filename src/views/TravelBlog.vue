@@ -9,7 +9,7 @@
                             <video width="350" height="200" controls>
                                 <source src='../assets/video.mp4' type="video/mp4">
                             </video>
-                            <v-img class="w-100 pa-2 h-100" :src='require(`../assets/${tour.image}`)'/>
+                            <v-img class="w-100 pa-2 h-100" :src='tour.image'/>
                         </v-card-item>
                         <v-card-text class="h-20">
                             <v-card-title>{{ tour.name }}</v-card-title>

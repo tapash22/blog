@@ -8,7 +8,7 @@
                     </v-sheet>
                 </v-col>
             </v-row>
-            <v-row>
+            <v-row v-if="hotels">
                 <v-col cols="12" md="4" sm="6" lg="4" xl="4" v-for="hotel in hotels" :key="hotel.id">
                     <v-card elevation="10" rounded="lg">
 
@@ -16,7 +16,8 @@
 
                         <v-card-title>{{ hotel.name }}</v-card-title>
                         <v-card-subtitle>price: ${{ hotel.price }}</v-card-subtitle>
-                        <v-rating dense v-model="hotel.rating" background-color="purple lighten-3" color="purple" size="20" class="mx-5"></v-rating>
+                        <v-rating dense v-model="hotel.rating" background-color="purple lighten-3" color="purple"
+                            size="20" class="mx-5"></v-rating>
                         <v-divider class="mt-3"></v-divider>
                         <v-card-text>
                             <v-list>
@@ -34,7 +35,7 @@
 </template>
 
 <script>
-import { mapState} from 'vuex';
+import { mapState } from 'vuex';
 
 export default {
     name: 'trip',
@@ -43,8 +44,8 @@ export default {
             date: '12/21/2022',
         }
     },
-    computed:{
-        ...mapState('hotel',{
+    computed: {
+        ...mapState('hotel', {
             hotels: 'hotels'
         })
     }

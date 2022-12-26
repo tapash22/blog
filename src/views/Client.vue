@@ -68,9 +68,7 @@ export default {
     name: 'client',
     data() {
         return {
-          
             menu: false,
-         
             textm:''
         }
     },

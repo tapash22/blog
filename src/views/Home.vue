@@ -6,40 +6,28 @@
             </v-col>
         </v-row>
         <v-container>
-
-
-            <v-row>
-
-                <v-col cols="12" lg="8" md="8" sm="12" xl="8" class="d-block justify-center my-5">
-
-                    <v-sheet elevation="10" class="pa-2 w-50 h-80 d-block justify-center mt-10 bg-white offset-3"
-                        rounded="lg">
-
-                        <h2 class="pp text-center my-2 text-red">Round Trip</h2>
-                        <!-- change input 
-                    text text-input :text-input-options="textInputOptions" 
-                    -->
-
+            <v-row class="w-100 d-block">
+                <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center my-5">
+                    <v-sheet elevation="10" class="pa-2 w-75 h-75 d-block justify-center mt-10 bg-white" rounded="lg">
+                        <h2 class="pp text-center mt-2 text-red">Round Trip</h2>
                         <Datepicker v-model="date" range week-start="0" calendar-cell-class-name="dp-custom-cell"
                             :auto-position="true" class="my-2 pa-2 mx-0 " placeholder="select date"></Datepicker>
                         <v-btn class="text-h6 d-flex justify-center w-50 offset-3 my-3" elevation="10"
                             @click="onSearch">
                             search
                         </v-btn>
-
-
                         <v-img class="w-100 h-50" src="https://i.ibb.co/Qb75K1p/bus1-removebg-preview.jpg" />
                     </v-sheet>
 
                 </v-col>
 
-                <v-col cols="12" lg="4" md="4" sm="12" xl="4">
+                <v-col cols="12" lg="12" md="12" sm="12" xl="12">
                     <v-card class="mx-5 my-5" elevation="10" rounded="lg">
                         <v-card-title class="p bg-red-lighten-1 ">Recent tour</v-card-title>
                         <v-divider></v-divider>
-                        <v-card-text>
-                            <v-list>
-                                <v-list-item class="d-flex" v-for="tour in tours" :key="tour.id">
+                        <v-card-text class="d-flex">
+                            <v-list  v-for="tour in tours" :key="tour.id">
+                                <v-list-item class="d-block w-1/3"  >
                                     <template v-slot:prepend>
                                         <v-img width="100" height="100" :src="tour.image" />
                                     </template>
@@ -61,7 +49,7 @@
                 </v-col>
             </v-row>
 
-            <h2 class="text-center my-5 w-50 offset-3 rounded-lg pp">Package</h2>
+            <h2 class="text-center my-2 w-50 offset-3 rounded-lg pp">Package</h2>
             <!-- <v-divider class="w-25 bg-red offset-4"></v-divider> -->
 
             <v-row>
@@ -82,9 +70,7 @@
                             </div>
                             <div class="d-flex justify-center">
                                 <p class="text-h6 text-weight-bold text-justify my-5 mx-5">
-                                    {{
-                                            packages.des
-                                    }}
+                                    {{ packages.des }}
                                 </p>
                             </div>
                         </v-card-text>
@@ -112,11 +98,6 @@
                     </v-sheet>
                 </v-col>
             </v-row>
-            <v-row>
-                <v-col>
-                    {{ name }}
-                </v-col>
-            </v-row>
         </v-container>
 
     </div>
@@ -126,6 +107,7 @@
 import TheSlider from '../components/TheSlider.vue';
 import Datepicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
+import { mapState } from 'vuex';
 
 export default {
     name: 'home',
@@ -136,47 +118,6 @@ export default {
             dialog: false,
             interval: {},
             value: 0,
-            tours: [
-                {
-                    id: 1,
-                    name: 'travaling to cox bazzer',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-
-                {
-                    id: 2,
-                    name: 'travaling to jaflong',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 3,
-                    name: 'travaling to Bandorbon',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-                {
-                    id: 4,
-                    name: 'travaling to sundorbon',
-                    date: new Date(),
-                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
-                },
-            ],
-            packagess: [
-                {
-                    id: 1,
-                    name: 'Transport',
-                    des: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt, ',
-                    icon: 'train-car'
-                },
-                {
-                    id: 2,
-                    name: 'Hotel',
-                    des: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt, ',
-                    icon: 'home-city-outline'
-                },
-            ]
         }
     },
 
@@ -188,20 +129,12 @@ export default {
             this.value += 1
         }, 100)
     },
-    computed:{
-        // ...mapState('hotel',{
-        //     name:'name'
-        // }),
-        getName(){
-        //    return this.$store.state.name;
-        return this.$store.state.buss.name;
-        }
+    computed: {
+        ...mapState('tour', {
+            tours: 'tours',
+            packagess: 'packagess'
+        })
     },
-    // computed:{
-    //     textInputOptions(){
-    //         return this.date('');
-    //     }
-    // },
     components: {
         TheSlider,
         Datepicker
@@ -215,10 +148,10 @@ export default {
         onSearch() {
             this.$router.push('/trip')
         },
-        getPage(id){
-            if(id === 1){
+        getPage(id) {
+            if (id === 1) {
                 this.$router.push('/transport');
-            }else{
+            } else {
                 this.$router.push('/hotel');
             }
         }

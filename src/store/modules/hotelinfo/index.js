@@ -1,5 +1,5 @@
 const HotelInformation = {
-    namespaced:true,
+    namespaced: true,
     state() {
         return {
             hotels: [
@@ -7,7 +7,7 @@ const HotelInformation = {
                     id: 1,
                     name: 'hotel name',
                     image: '',
-                    rating:4,
+                    rating: 4,
                     price: 44,
                     lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
                 },
@@ -15,7 +15,7 @@ const HotelInformation = {
                     id: 2,
                     name: 'hotel name',
                     image: '',
-                    rating:4,
+                    rating: 4,
                     price: 44,
                     lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
                 },
@@ -23,7 +23,7 @@ const HotelInformation = {
                     id: 3,
                     name: 'hotel name',
                     image: '',
-                    rating:4,
+                    rating: 4,
                     price: 44,
                     lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
                 },
@@ -32,7 +32,7 @@ const HotelInformation = {
                     name: 'hotel name',
                     image: '',
                     price: 44,
-                    rating:4,
+                    rating: 4,
                     lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
                 },
                 {
@@ -40,14 +40,14 @@ const HotelInformation = {
                     name: 'hotel name',
                     image: '',
                     price: 44,
-                    rating:4,
+                    rating: 4,
                     lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
                 },
                 {
                     id: 6,
                     name: 'hotel name',
                     image: '',
-                    rating:4,
+                    rating: 4,
                     price: 44,
                     lists: ['Complementary Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
                 },

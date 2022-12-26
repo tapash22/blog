@@ -7,56 +7,71 @@ const TourInformation = {
                     id: 1,
                     name: 'travaling to cox bazzer',
                     date: new Date(),
-                    image: "bus.jpg",
+                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
                 {
                     id: 2,
                     name: 'travaling to jaflong',
                     date: new Date(),
-                    image: "bus.jpg",
+                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
                 {
                     id: 3,
                     name: 'travaling to Bandorbon',
                     date: new Date(),
-                    image: "bus.jpg",
+                    image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
-                {
-                    id: 4,
-                    name: 'travaling to sundorbon',
-                    date: new Date(),
-                    image: "bus.jpg",
-                },
-                {
-                    id: 5,
-                    name: 'travaling to cox bazzer',
-                    date: new Date(),
-                    image: "bus.jpg",
-                },
+                // {
+                //     id: 4,
+                //     name: 'travaling to sundorbon',
+                //     date: new Date(),
+                //     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
+                // },
+                // {
+                //     id: 5,
+                //     name: 'travaling to cox bazzer',
+                //     date: new Date(),
+                //     image: "bus.jpg",
+                // },
 
+                // {
+                //     id: 6,
+                //     name: 'travaling to jaflong',
+                //     date: new Date(),
+                //     image: "bus.jpg",
+                // },
+                // {
+                //     id: 7,
+                //     name: 'travaling to Bandorbon',
+                //     date: new Date(),
+                //     image: "bus.jpg",
+                // },
+                // {
+                //     id: 8,
+                //     name: 'travaling to sundorbon',
+                //     date: new Date(),
+                //     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
+                // },
+                // {
+                //     id: 9,
+                //     name: 'travaling to Borisal',
+                //     date: new Date(),
+                //     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
+                // },
+            ],
+
+            packagess: [
                 {
-                    id: 6,
-                    name: 'travaling to jaflong',
-                    date: new Date(),
-                    image: "bus.jpg",
+                    id: 1,
+                    name: 'Transport',
+                    des: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt, ',
+                    icon: 'train-car'
                 },
                 {
-                    id: 7,
-                    name: 'travaling to Bandorbon',
-                    date: new Date(),
-                    image: "bus.jpg",
-                },
-                {
-                    id: 8,
-                    name: 'travaling to sundorbon',
-                    date: new Date(),
-                    image: "bus.jpg",
-                },
-                {
-                    id: 9,
-                    name: 'travaling to Borisal',
-                    date: new Date(),
-                    image: "bus.jpg",
+                    id: 2,
+                    name: 'Hotel',
+                    des: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt, ',
+                    icon: 'home-city-outline'
                 },
             ]
         }

@@ -2,15 +2,16 @@
     <div class="hotel">
         <FilterView />
         <v-container>
+            <h2 class="text-h4 text-uppercase my-5 text-center">Hotel</h2>
             <v-row>
                 <v-col cols="12" md="4" lg="4" sm="6" xl="4" v-for="hotel in hotels" :key="hotel.id">
                     <v-card class="rounded-lg" elevation="10">
                        
                         <v-img class="w-100 h-50 pa-2" src="../assets/hotel.jpg" />
-                        <v-card-title class="text-h6  text-uppercase">{{ hotel.h_name }}</v-card-title>
+                        <v-card-title class="text-h6  text-uppercase">{{ hotel.name }}</v-card-title>
                       
                         <v-card-text class="pa-0 bg-red-darken-2">
-                            <v-card-title class="text-h5 text-weight-bold" color="black">Price: {{ hotel.h_price }}</v-card-title>
+                            <v-card-title class="text-h5 text-weight-bold" color="black">Price: {{ hotel.price }}</v-card-title>
                             <v-rating v-model="hotel.rating" size="20" readonly class="mx-5" color="white"></v-rating>
                        
                         </v-card-text>
@@ -41,65 +42,16 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import FilterView from '../components/FilterView.vue';
 
 export default {
     name: 'hotel',
 
-    data() {
-        return {
-            rating: 4,
-            hotels:[
-                {
-                    id:1,
-                    h_name:'hotel name',
-                    h_price:44,
-                    h_image:'',
-                    rating:4,
-                    lists:['complimentory break-fast','swimming','gym','room service']
-                },
-                {
-                    id:2,
-                    h_name:'hotel name',
-                    h_price:44,
-                    h_image:'',
-                    rating:4,
-                    lists:['complimentory break-fast','swimming','gym','room service']
-                },
-                {
-                    id:3,
-                    h_name:'hotel name',
-                    h_price:44,
-                    h_image:'',
-                    rating:4,
-                    lists:['complimentory break-fast','swimming','gym','room service']
-                },
-                {
-                    id:4,
-                    h_name:'hotel name',
-                    h_price:44,
-                    h_image:'',
-                    rating:4,
-                    lists:['complimentory break-fast','swimming','gym','room service']
-                },
-                {
-                    id:5,
-                    h_name:'hotel name',
-                    h_price:44,
-                    h_image:'',
-                    rating:4,
-                    lists:['complimentory break-fast','swimming','gym','room service']
-                },
-                {
-                    id:6,
-                    h_name:'hotel name',
-                    h_price:44,
-                    h_image:'',
-                    rating:4,
-                    lists:['complimentory break-fast','swimming','gym','room service']
-                },
-            ]
-        }
+    computed:{
+        ...mapState('hotel',{
+            hotels:'hotels',
+        })
     },
 
     components: {

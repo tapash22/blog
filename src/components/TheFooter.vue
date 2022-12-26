@@ -1,9 +1,9 @@
 <template>
     <div class="the-footer">
         <v-footer class="d-block ma-0 pa-0">
-            <div class="bg-red-darken-2 w-100 d-flex px-4">
+            <div class="bg-red-darken-2 w-100 d-flex px-4 d-smAndDown-block">
 
-                <div class="d-block pa-5 w-2/3">
+                <div class="d-block pa-5 w-2/3 ">
                     <strong class="text-h4 text-weight-lg">Introduce Your Journey</strong>
                     <p class="text-justify text-body1 my-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem modi saepe
                         placeat amet in sed praesentium tempora nisi. Dolorum illum tenetur aut exercitationem sunt iure numquam hic.
