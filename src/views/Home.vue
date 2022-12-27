@@ -7,12 +7,12 @@
         </v-row>
         <v-container>
             <v-row class="w-100 d-block">
-                <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center my-5">
+                <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center">
                     <v-sheet class="pa-2 w-75 h-25 d-block justify-center mt-10 bg-white" rounded="lg">
                         <h2 class="pp text-center mt-2 text-red">Round Trip</h2>
                         <Datepicker v-model="date" range week-start="0" calendar-cell-class-name="dp-custom-cell"
                             :auto-position="true" class="my-2 pa-2 mx-0 " placeholder="select date"></Datepicker>
-                        <v-btn class="text-h6 d-flex justify-center w-50 offset-3 my-3" elevation="10"
+                        <v-btn class="text-h6 d-flex justify-center w-50 offset-3 my-3 bg-red" elevation="10"
                             @click="onSearch">
                             search
                         </v-btn>
@@ -20,8 +20,8 @@
 
                 </v-col>
             </v-row>
-            <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg" elevation="1">
-                <v-card-title class=" text-red-lighten-1 text-h5">Recent tour</v-card-title>
+            <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg" >
+                <h3 class=" text-red-lighten-1 text-h5">Recent tour</h3>
                 <v-btn elevation="6" class="bg-red" @click="viewAll">View all</v-btn>
             </v-sheet>
             <v-row class="w-100 d-flex justify-center my-5">
@@ -30,8 +30,8 @@
                 </v-col>
             </v-row>
 
-            <v-sheet class="w-100 h-25 d-flex justify-center my-5 pa-2" rounded="lg" elevation="1">
-                <h2 class="text-h4">Package</h2>
+            <v-sheet class="w-100 h-25 d-flex justify-center my-5 pa-2" rounded="lg">
+                <h3 class="text-h4">Package</h3>
             </v-sheet>
 
             <!-- <v-divider class="w-25 bg-red offset-4"></v-divider> -->
