@@ -6,39 +6,31 @@
             </v-col>
         </v-row>
         <v-container>
-            <v-row class="w-100 d-block">
+            <v-row class="w-100 d-block pa-0 ma-0">
                 <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center">
-                    <v-sheet class="pa-2 w-75 h-25 d-block justify-center mt-10 bg-white" rounded="lg">
-                        <h2 class="pp text-center mt-2 text-red">Round Trip</h2>
-                        <Datepicker v-model="date" range week-start="0" calendar-cell-class-name="dp-custom-cell"
-                            :auto-position="true" class="my-2 pa-2 mx-0 " placeholder="select date"></Datepicker>
-                        <v-btn class="text-h6 d-flex justify-center w-50 offset-3 my-3 bg-red" elevation="10"
-                            @click="onSearch">
-                            search
-                        </v-btn>
-                    </v-sheet>
-
+                    <GlobalSearch />
                 </v-col>
             </v-row>
-            <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg" >
-                <h3 class=" text-red-lighten-1 text-h5">Recent tour</h3>
+            <!-- start tour -->
+            <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg">
+                <h3 class=" text-red-lighten-1 text-h4">Recent tour</h3>
                 <v-btn elevation="6" class="bg-red" @click="viewAll">View all</v-btn>
             </v-sheet>
+
             <v-row class="w-100 d-flex justify-center my-5">
-                <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="tour in tours" :key="tour.id">
-                    <TourDetails :tour="tour" />
+                <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="index in countLength" :key="index">
+                    <TourDetails :tour="tours[index - 1]" />
                 </v-col>
             </v-row>
+            <!-- end tour -->
 
+            <!--start packages  -->
             <v-sheet class="w-100 h-25 d-flex justify-center my-5 pa-2" rounded="lg">
                 <h3 class="text-h4">Package</h3>
             </v-sheet>
-
-            <!-- <v-divider class="w-25 bg-red offset-4"></v-divider> -->
-
             <v-row class="my-5">
                 <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="packages in packagess" :key="packages.id">
-                 <PackageDetails :packages="packages"/>
+                    <PackageDetails :packages="packages" />
                 </v-col>
 
                 <v-col cols="12" md="4" lg="4" xl="4" sm="12" class="pa-10">
@@ -54,24 +46,25 @@
                     </v-sheet>
                 </v-col>
             </v-row>
+
+            <!-- end packages -->
         </v-container>
 
     </div>
 </template>
 
 <script>
+import GlobalSearch from '../components/GlobalSearch.vue';
 import TheSlider from '../components/TheSlider.vue';
 import PackageDetails from '../components/PackageDetails.vue';
 import TourDetails from '../components/TourDetils.vue';
-import Datepicker from '@vuepic/vue-datepicker';
-import '@vuepic/vue-datepicker/dist/main.css'
+
 import { mapState } from 'vuex';
 
 export default {
     name: 'home',
     data() {
         return {
-            date: '',
             textInputOptions: 'MM.dd.yyyy HH:mm',
             dialog: false,
             interval: {},
@@ -87,17 +80,22 @@ export default {
             this.value += 1
         }, 100)
     },
+
     computed: {
         ...mapState('tour', {
             tours: 'tours',
             packagess: 'packagess'
-        })
+        }),
+
+        countLength() {
+            return Math.min(3, this.tours.length);
+        }
     },
     components: {
         TheSlider,
-        Datepicker,
         TourDetails,
-        PackageDetails
+        PackageDetails,
+        GlobalSearch
     },
 
     methods: {
@@ -105,9 +103,7 @@ export default {
             this.$router.replace('/travelblog');
             console.log('routed works');
         },
-        onSearch() {
-            this.$router.push('/trip')
-        },
+
         getPage(id) {
             if (id === 1) {
                 this.$router.push('/transport');

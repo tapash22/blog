@@ -19,13 +19,8 @@
                         </v-acrd-text>
                         <v-card-text>
                             <v-row>
-                                <v-col cols="12" sm="12" md="12" lg="12" xl="12" class="d-flex justify-space-between">
-                                    <v-btn  class="w-25" @click="onClick(name)" >
-                                        Hotel
-                                    </v-btn>
-                                    <v-btn class="w-25" @click="onClick()">
-                                        Transport
-                                    </v-btn>
+                                <v-col cols="12" sm="12" md="6" lg="6" xl="6" class="d-flex justify-space-between">
+                                    
                                 </v-col>
                             </v-row>
                      

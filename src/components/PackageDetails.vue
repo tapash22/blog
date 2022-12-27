@@ -41,12 +41,12 @@ export default {
     props: ['packages'],
     data() {
         return {
-            id: ''
+            // id: ''
         }
     },
     methods: {
         getPage() {
-            this.$emit('id', this.id)
+            console.log('click')
         }
     }
 }

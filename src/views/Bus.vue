@@ -75,10 +75,8 @@ export default {
     name: 'bus',
     data() {
         return {
-           
             price: 1500,
             clicked: true,
-         
         }
     },
     computed:{
