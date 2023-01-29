@@ -2,9 +2,9 @@
     <div class="hotel">
         <FilterView />
         <v-container>
-            <h2 class="text-h4 text-uppercase my-2 text-center">Hotel</h2>
+            <h2 class="text-h6 font-weight-bold text-uppercase my-2 text-center">Hotel</h2>
             <v-row>
-                <v-col cols="12" md="4" lg="4" sm="6" xl="4" v-for="hotel in hotels" :key="hotel.id">
+                <v-col cols="12" md="3" lg="3" sm="6" xl="3" v-for="hotel in hotels" :key="hotel.id">
                     <SingelHotel :hotel="hotel"/>
                 </v-col>
             </v-row>

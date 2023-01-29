@@ -16,7 +16,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import TourDetails from '../components/TourDetils.vue';
+import TourDetails from '../components/TourDetails.vue';
 
 export default {
     name: 'trave-lblog',

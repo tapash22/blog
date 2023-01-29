@@ -9,7 +9,7 @@ const HotelInformation = {
                     image: '',
                     rating: 4,
                     price: 44,
-                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
                 },
                 {
                     id: 2,
@@ -17,7 +17,7 @@ const HotelInformation = {
                     image: '',
                     rating: 4,
                     price: 44,
-                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
                 },
                 {
                     id: 3,
@@ -25,7 +25,7 @@ const HotelInformation = {
                     image: '',
                     rating: 4,
                     price: 44,
-                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
                 },
                 {
                     id: 4,
@@ -33,7 +33,7 @@ const HotelInformation = {
                     image: '',
                     price: 44,
                     rating: 4,
-                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
                 },
                 {
                     id: 5,
@@ -41,7 +41,7 @@ const HotelInformation = {
                     image: '',
                     price: 44,
                     rating: 4,
-                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
                 },
                 {
                     id: 6,
@@ -49,7 +49,7 @@ const HotelInformation = {
                     image: '',
                     rating: 4,
                     price: 44,
-                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool', 'Food Service']
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
                 },
             ]
         }

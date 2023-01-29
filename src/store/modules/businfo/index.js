@@ -144,6 +144,23 @@ const BusInformation = {
                             price: 1000,
                         }
                     ]
+                },
+                {
+                    id: 4,
+                    name: 'poribohon',
+                    image: '',
+                    buses: [
+                        {
+                            id: 1,
+                            features: 'AC',
+                            price: 1500,
+                        },
+                        {
+                            id: 2,
+                            features: 'Non AC',
+                            price: 1000,
+                        }
+                    ]
                 }
             ]
         }

@@ -1,9 +1,9 @@
 <template>
     <div class="global-search d-flex justify-center w-100">
-        <v-sheet class="pa-2 w-50 h-25 d-block justify-center mt-10 bg-white" rounded="lg">
-            <h2 class="pp text-center mt-2 text-red">Round Trip</h2>
+        <v-sheet class="pa-2 w-50 h-25 d-block justify-center mt-2 bg-white" rounded="lg">
+            <h2 class="pp text-center  text-red">Round Trip</h2>
             <Datepicker v-model="date" range week-start="0" calendar-cell-class-name="dp-custom-cell"
-                :auto-position="true" class="my-2 pa-2 mx-0 " placeholder="select date"></Datepicker>
+                :auto-position="true" class="my-1 pa-2 mx-0 " placeholder="select date"></Datepicker>
             <v-btn class="text-h6 d-flex justify-center w-50 offset-3 my-3 bg-red" elevation="10" @click="onSearch">
                 search
             </v-btn>

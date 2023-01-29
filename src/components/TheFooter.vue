@@ -15,23 +15,24 @@
                 </div>
             </v-col>
 
-            <v-col cols="12" sm="12" md="2" lg="2" xl="2" class="d-flex justify-center">
-                <v-img src="https://i.ibb.co/vP60CQb/10476-removebg-preview.png" width="200"/>
-            </v-col>
-
             <v-col cols="6" sm="6" md="2" lg="2" xl="2" v-for="list in lists" :key="list.id" class="d-flex justify-center">
                 <v-list class="list">
                     <v-list-item-title class="text-body-1 font-weight-bold text-white">{{ list.title }}</v-list-item-title>
                     <v-divider color="white"></v-divider>
                     <!-- <v-list-item class="" > -->
                     <router-link v-for="lis in list.list" :key="lis" :to="lis" class="text-decoration-none ">
-                        <v-list-item-subtitle class="text-body-2 text-white pa-1 ">
+                        <v-list-item-title class="text-body-2 text-white pa-1 ">
                             {{ lis }}
-                        </v-list-item-subtitle>
+                        </v-list-item-title>
                     </router-link>
                     <!-- </v-list-item> -->
                 </v-list>
 
+            </v-col>
+
+
+            <v-col cols="12" sm="12" md="2" lg="2" xl="2" class="d-flex justify-center">
+                <v-img src="https://i.ibb.co/vP60CQb/10476-removebg-preview.png" width="200"/>
             </v-col>
 
             <v-col cols="12" sm="12" lg="3" md="3" xl="3" class="d-flex justify-center align-center">

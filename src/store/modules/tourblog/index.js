@@ -6,56 +6,56 @@ const TourInformation = {
                 {
                     id: 1,
                     name: 'travaling to cox bazzer',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 24).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
                 {
                     id: 2,
                     name: 'travaling to jaflong',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 25).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
                 {
                     id: 3,
                     name: 'travaling to Bandorbon',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 28).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
                 {
                     id: 4,
                     name: 'travaling to sundorbon',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 29).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
                 {
                     id: 5,
                     name: 'travaling to cox bazzer',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 24).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg',
                 },
 
                 {
                     id: 6,
                     name: 'travaling to jaflong',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 24).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg',
                 },
                 {
                     id: 7,
                     name: 'travaling to Bandorbon',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 24).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg',
                 },
                 {
                     id: 8,
                     name: 'travaling to sundorbon',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 24).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
                 {
                     id: 9,
                     name: 'travaling to Borisal',
-                    date: new Date(),
+                    date:  new Date(2022, 0, 24).toUTCString(),
                     image: 'https://i.ibb.co/5YVBDG0/bus.jpg'
                 },
             ],

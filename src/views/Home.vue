@@ -12,12 +12,12 @@
             </v-col>
         </v-row>
         <!-- start tour -->
-        <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg">
-            <h3 class=" text-red-lighten-1 text-h4">Recent tour</h3>
-            <v-btn elevation="6" class="bg-red" @click="viewAll">View all</v-btn>
+        <v-sheet class="w-100 h-25 d-flex justify-space-between my-2" rounded="lg">
+            <h3 class=" text-red-lighten-1 text-h6 font-weight-bold">Recent tour</h3>
+            <v-btn elevation="6" class="bg-red text-body-1 " @click="viewAll">view all</v-btn>
         </v-sheet>
 
-        <v-row class="w-100 d-flex justify-center my-5">
+        <v-row class="w-100 d-flex justify-center my-2">
             <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="index in countLength" :key="index">
                 <TourDetails :tour="tours[index - 1]" />
             </v-col>
@@ -25,20 +25,21 @@
         <!-- end tour -->
 
         <!--start packages  -->
-        <v-sheet class="w-100 h-25 d-flex justify-center my-5 pa-2" rounded="lg">
-            <h3 class="text-h4">Package</h3>
+        <v-sheet class="w-100 h-25 d-flex justify-center my-2" rounded="lg">
+            <h3 class="text-h6 font-weight-bold text-red-lighten-1">Package</h3>
         </v-sheet>
-        <v-row class="my-5">
+        <v-row class="my-2">
             <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="packages in packagess" :key="packages.id">
                 <PackageDetails :packages="packages" />
             </v-col>
 
-            <v-col cols="12" md="4" lg="4" xl="4" sm="12" class="pa-10">
-                <v-sheet elevation="10" class="my-10 mx-auto pa-5 mt-16" rounded="xl">
-                    <v-progress-circular :rotate="360" :size="80" :width="10" :model-value="value" color="red" class="offset-4 my-5">
+            <v-col cols="12" md="4" lg="4" xl="4" sm="12" class=" d-flex justify-center align-center">
+                <!-- <img src="https://i.ibb.co/drxNGrh/travel41.jpg" class="image" /> -->
+                <v-sheet elevation="10" class="my-5 mx-auto pa-5 d-flex justify-space-between" rounded="xl">
+                    <v-progress-circular :rotate="360" :size="120" :width="10" :model-value="value" color="red" class=" my-2">
                         {{ value }}
                     </v-progress-circular>
-                    <p class="text-h6 text-center pa-5">
+                    <p class="text-body-1 text-center pa-5 my-5 align-center">
                         You can choose any package, what do you want!
                     </p>
 
@@ -62,7 +63,7 @@
 import GlobalSearch from '../components/GlobalSearch.vue';
 import TheSlider from '../components/TheSlider.vue';
 import PackageDetails from '../components/PackageDetails.vue';
-import TourDetails from '../components/TourDetils.vue';
+import TourDetails from '../components/TourDetails.vue';
 // import MakeStarDynamic from '../components/MakeStarDynamic.vue';
 
 import {
@@ -157,5 +158,12 @@ export default {
 
 .rat {
     color: green;
+}
+
+.image{
+ width:500px;
+height: 250px;
+margin-left:-200px;
+background-size: cover;
 }
 </style>
