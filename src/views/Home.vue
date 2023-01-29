@@ -1,56 +1,61 @@
 <template>
-    <div class="home">
-        <v-row class="pa-0 ma-0">
-            <v-col cols="12" lg="12" md="12" xl="12">
-                <TheSlider />
+<div class="home">
+    <v-row class="pa-0 ma-0">
+        <v-col cols="12" lg="12" md="12" xl="12">
+            <TheSlider />
+        </v-col>
+    </v-row>
+    <v-container>
+        <v-row class="w-100 d-block pa-0 ma-0">
+            <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center">
+                <GlobalSearch />
             </v-col>
         </v-row>
-        <v-container>
-            <v-row class="w-100 d-block pa-0 ma-0">
-                <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center">
-                    <GlobalSearch />
-                </v-col>
-            </v-row>
-            <!-- start tour -->
-            <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg">
-                <h3 class=" text-red-lighten-1 text-h4">Recent tour</h3>
-                <v-btn elevation="6" class="bg-red" @click="viewAll">View all</v-btn>
-            </v-sheet>
+        <!-- start tour -->
+        <v-sheet class="w-100 h-25 d-flex justify-space-between my-2 pa-2" rounded="lg">
+            <h3 class=" text-red-lighten-1 text-h4">Recent tour</h3>
+            <v-btn elevation="6" class="bg-red" @click="viewAll">View all</v-btn>
+        </v-sheet>
 
-            <v-row class="w-100 d-flex justify-center my-5">
-                <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="index in countLength" :key="index">
-                    <TourDetails :tour="tours[index - 1]" />
-                </v-col>
-            </v-row>
-            <!-- end tour -->
+        <v-row class="w-100 d-flex justify-center my-5">
+            <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="index in countLength" :key="index">
+                <TourDetails :tour="tours[index - 1]" />
+            </v-col>
+        </v-row>
+        <!-- end tour -->
 
-            <!--start packages  -->
-            <v-sheet class="w-100 h-25 d-flex justify-center my-5 pa-2" rounded="lg">
-                <h3 class="text-h4">Package</h3>
-            </v-sheet>
-            <v-row class="my-5">
-                <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="packages in packagess" :key="packages.id">
-                    <PackageDetails :packages="packages" />
-                </v-col>
+        <!--start packages  -->
+        <v-sheet class="w-100 h-25 d-flex justify-center my-5 pa-2" rounded="lg">
+            <h3 class="text-h4">Package</h3>
+        </v-sheet>
+        <v-row class="my-5">
+            <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="packages in packagess" :key="packages.id">
+                <PackageDetails :packages="packages" />
+            </v-col>
 
-                <v-col cols="12" md="4" lg="4" xl="4" sm="12" class="pa-10">
-                    <v-sheet elevation="10" class="my-10 mx-auto pa-5 mt-16" rounded="xl">
-                        <v-progress-circular :rotate="360" :size="80" :width="10" :model-value="value" color="red"
-                            class="offset-4 my-5">
-                            {{ value }}
-                        </v-progress-circular>
-                        <p class="text-h6 text-center pa-5">
-                            You can choose any package, what do you want!
-                        </p>
+            <v-col cols="12" md="4" lg="4" xl="4" sm="12" class="pa-10">
+                <v-sheet elevation="10" class="my-10 mx-auto pa-5 mt-16" rounded="xl">
+                    <v-progress-circular :rotate="360" :size="80" :width="10" :model-value="value" color="red" class="offset-4 my-5">
+                        {{ value }}
+                    </v-progress-circular>
+                    <p class="text-h6 text-center pa-5">
+                        You can choose any package, what do you want!
+                    </p>
 
-                    </v-sheet>
-                </v-col>
-            </v-row>
+                </v-sheet>
+            </v-col>
+        </v-row>
+        <!-- <v-row>
+            <v-col>
+                <MakeStarDynamic />
+            </v-col>
+        </v-row> -->
 
-            <!-- end packages -->
-        </v-container>
+        <!-- end packages -->
+    </v-container>
 
-    </div>
+
+</div>
 </template>
 
 <script>
@@ -58,8 +63,11 @@ import GlobalSearch from '../components/GlobalSearch.vue';
 import TheSlider from '../components/TheSlider.vue';
 import PackageDetails from '../components/PackageDetails.vue';
 import TourDetails from '../components/TourDetils.vue';
+// import MakeStarDynamic from '../components/MakeStarDynamic.vue';
 
-import { mapState } from 'vuex';
+import {
+    mapState
+} from 'vuex';
 
 export default {
     name: 'home',
@@ -69,6 +77,7 @@ export default {
             dialog: false,
             interval: {},
             value: 0,
+            icons: true,
         }
     },
 
@@ -95,7 +104,8 @@ export default {
         TheSlider,
         TourDetails,
         PackageDetails,
-        GlobalSearch
+        GlobalSearch,
+        // MakeStarDynamic for dynamic star
     },
 
     methods: {
@@ -143,5 +153,9 @@ export default {
 
 .rounded {
     border-radius: 50%;
+}
+
+.rat {
+    color: green;
 }
 </style>
