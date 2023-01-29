@@ -2,7 +2,8 @@
 <div class="travel-blog-detail">
     <v-row class="d-flex justify-center">
         <v-col cols="10" sm="10" lg="10" md="12" xl="12" class="pa-5">
-            <video controls autoplay class="w-100" height="300">
+            <!-- autoplay -->
+            <video controls class="w-100" height="300">
                 <source src="../assets/video.mp4" type="video/mp4" />
                 <source src="speach.ogg" type="video/ogg" />
             </video>
@@ -13,18 +14,35 @@
                     <v-card-title class="text-left text-h6">{{newName}}</v-card-title>
                     <v-card-subtitle class="my-0 text-body-1">new Date</v-card-subtitle>
                     <v-card-text class="d-flex justify-left">
-                        <p class="text-justify pa-2">
+                        <p class="text-justify pa-2 my-0">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio eveniet
                             ex, dicta asperiores eos perspiciatis voluptate a. Blanditiis, iusto tempora. Recusandae
-                            nihil quod id saepe iste quia explicabo dignissimos...<span v-if="text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio eveniet
+                            nihil quod id saepe iste quia explicabo dignissimos.
+                            <span v-if="text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio eveniet
                                 ex, dicta asperiores eos perspiciatis voluptate a. Blanditiis, iusto tempora. Recusandae
                                 nihil quod id saepe iste quia explicabo dignissimos?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio eveniet
                                 ex, dicta asperiores eos perspiciatis voluptate a. Blanditiis, iusto tempora. Recusandae
-                                nihil quod id saepe iste quia explicabo dignissimos?
+                                nihil quod id saepe iste quia explicabo dignissimos.
+
+                                <v-list class="pa-5 ">
+                                    <v-list-item-title class="text-body-1 font-weight-bold my-2">
+                                        Provided Services
+                                        </v-list-item-title>
+                                    <v-list-item-subtitle class="text-body-2 my-2 ">
+                                        If you are ready to travaling then you can use our provided service and take
+                                        all adbvantage and facilities.we are provided...
+                                    </v-list-item-subtitle>
+
+                                    <v-list-item class="pa-0 d-flex ">
+                                        <v-btn @click="onTransport()" class="bg-red-lighten-1 text-white mx-2">Transport service</v-btn>
+                                        <v-btn @click="onHotel()" class="bg-red-lighten-1 text-white mx-2">Hotel service</v-btn>
+                                    </v-list-item>
+                                </v-list>
                             </span>
                             <br />
-                            
-                            <v-btn @click="text = !text" class="text-black my-2 text-body-1"> {{ text ? "Show less" : "Show all" }}</v-btn>
+
+                            <v-btn @click="text = !text" class="text-black my-2 text-body-1"> {{ text ? "Show less" : "Show more" }}</v-btn>
                         </p>
                     </v-card-text>
                     <v-card-text>
@@ -61,13 +79,20 @@ export default {
         }
     },
     methods: {
-        onClick(name) {
-            if (name === 'hotel') {
-                this.$router.push('/hotel');
-            } else {
-                this.$router.push('/transport')
-            }
+        // onClick(name) {
+        //     if (name === 'hotel') {
+        //         this.$router.push('/hotel');
+        //     } else {
+        //         this.$router.push('/transport')
+        //     }
+        // },
+
+        onHotel(){
+            this.$router.push('/hotel');
         },
+        onTransport(){
+            this.$router.push('/transport');
+        }
     }
 }
 </script>

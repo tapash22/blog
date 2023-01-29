@@ -51,6 +51,22 @@ const HotelInformation = {
                     price: 44,
                     lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
                 },
+                {
+                    id: 7,
+                    name: 'hotel name',
+                    image: '',
+                    price: 44,
+                    rating: 4,
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
+                },
+                {
+                    id: 8,
+                    name: 'hotel name',
+                    image: '',
+                    rating: 4,
+                    price: 44,
+                    lists: ['Breakfast', 'Room Service', 'Gym', 'Swimming Pool']
+                },
             ]
         }
     },
