@@ -2,7 +2,7 @@
 <div class="home">
     <v-row class="pa-0 ma-0">
         <v-col cols="12" lg="12" md="12" xl="12">
-            <TheSlider />
+            <TheSlider :slides="slides"/>
         </v-col>
     </v-row>
     <v-container>
@@ -33,9 +33,9 @@
                 <PackageDetails :packages="packages" />
             </v-col>
 
-            <v-col cols="12" md="4" lg="4" xl="4" sm="12" class=" d-flex justify-center align-center">
-                <!-- <img src="https://i.ibb.co/drxNGrh/travel41.jpg" class="image" /> -->
-                <v-sheet elevation="10" class="my-5 mx-auto pa-5 d-flex justify-space-between" rounded="xl">
+            <v-col cols="12" md="4" lg="4" xl="4" sm="12" class=" d-flex justify-center">
+                <v-img src="https://i.ibb.co/vP60CQb/10476-removebg-preview.png" width="90%" />
+                <!-- <v-sheet elevation="10" class="my-5 mx-auto pa-5 d-flex justify-space-between" rounded="xl">
                     <v-progress-circular :rotate="360" :size="120" :width="10" :model-value="value" color="red" class=" my-2">
                         {{ value }}
                     </v-progress-circular>
@@ -43,7 +43,7 @@
                         You can choose any package, what do you want!
                     </p>
 
-                </v-sheet>
+                </v-sheet> -->
             </v-col>
         </v-row>
         <!-- <v-row>
@@ -79,6 +79,24 @@ export default {
             interval: {},
             value: 0,
             icons: true,
+
+            slides: [
+                {
+                    id:1,
+                    image:'https://i.ibb.co/jW01ftb/dino-reichmuth-A5r-CN8626-Ck-unsplash-1200x400.jpg',
+                    name:'Dhaka',
+                },
+                {
+                    id:2,
+                    image:'https://i.ibb.co/t20S98b/2.jpg',
+                    name:'Chattogong',
+                },
+                {
+                    id:3,
+                    image:'https://i.ibb.co/Q6yNhfq/3.jpg',
+                    name:'Khulna',
+                },
+            ]
         }
     },
 

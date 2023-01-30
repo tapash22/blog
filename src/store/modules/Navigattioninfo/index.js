@@ -1,4 +1,4 @@
-const NavigattionInformation = {
+export default {
     namespaced:true,
     state() {
         return {
@@ -30,5 +30,3 @@ const NavigattionInformation = {
 
     }
 }
-
-export default NavigattionInformation;

@@ -1,4 +1,4 @@
-const TourInformation = {
+export default {
     namespaced:true,
     state(){
         return{
@@ -88,6 +88,6 @@ const TourInformation = {
 
     },
 
-};
+}
 
-export default TourInformation;
+

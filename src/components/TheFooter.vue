@@ -31,9 +31,9 @@
             </v-col>
 
 
-            <v-col cols="12" sm="12" md="2" lg="2" xl="2" class="d-flex justify-center">
+            <!-- <v-col cols="12" sm="12" md="2" lg="2" xl="2" class="d-flex justify-center">
                 <v-img src="https://i.ibb.co/vP60CQb/10476-removebg-preview.png" width="200"/>
-            </v-col>
+            </v-col> -->
 
             <v-col cols="12" sm="12" lg="3" md="3" xl="3" class="d-flex justify-center align-center">
                 <v-btn v-for="icon in icons" :key="icon" class="mx-1 bg-white mx-smAndDown-3 text-h6" color="red" :icon="icon" size="small"></v-btn>
@@ -73,6 +73,18 @@ export default {
             {
                 id: 2,
                 title: 'Information',
+                list: [
+                    'Recent Tour',
+                    'Travel Blog',
+                    'Our services',
+                    'Gideline with details',
+                    'Blog about',
+                    'Contact Form',
+                ]
+            },
+            {
+                id: 3,
+                title: 'Terms & Conditions',
                 list: [
                     'Recent Tour',
                     'Travel Blog',

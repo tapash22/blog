@@ -1,26 +1,27 @@
 <template>
-<div class="full-hotel-view">
+<div class="fullhotel">
     <v-container>
-        <h2 class="text-h6 font-weight-bold text-center my-2">Hotel name</h2>
-        <v-row>
-            <v-col cols="12" sm="12" md="6" lg="6" xl="6" v-for="room in hotel_rooms" :key="room.id">
-                <HotelRoomView :room="room" />
-            </v-col>
-        </v-row>
+        {{ hotels.name }}
+        <!-- <v-card v-if="hotels">
+            <v-img :src="hotels.image" height="100" cover />
+     
+        </v-card> -->
     </v-container>
 </div>
 </template>
 
 <script>
 import HotelRoomView from '../components/HotelRoomView.vue';
-
+import {
+    mapGetters,
+    mapState
+} from 'vuex';
 export default {
-    name: 'full-hotel-view',
-
+    name: 'fullhotel',
     data() {
         return {
             show: false,
-
+            id: null,
             hotel_rooms: [{
                     id: 1,
                     name: 'couple room',
@@ -213,8 +214,24 @@ export default {
                         },
                     ],
                 },
-            ]
+            ],
         }
+
+    },
+
+    mounted(){
+        this.id = this.$route.params.id;
+        this.getHotelById(this.id);
+    },
+
+    computed: {
+
+        hotels() {
+            return this.getHotelById(this.id);
+        },
+        ...mapGetters('hotel', {
+            getHotelById: 'getHotelById'
+        })
     },
 
     components: {

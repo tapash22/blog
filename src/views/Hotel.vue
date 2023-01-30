@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 import FilterView from '../components/FilterView.vue';
 import SingelHotel from '../components/SingelHotel.vue';
 
@@ -25,6 +25,10 @@ export default {
         ...mapState('hotel', {
             hotels: 'hotels',
         })
+
+        // ...mapGetters('hotel',{
+        //     getHotel : 'getHotel'
+        // })
     },
 
     components: {

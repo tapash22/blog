@@ -9,8 +9,8 @@
                 <v-card-title class="text-body-1 text-uppercase pa-0 my-2">{{ tour.name }}</v-card-title>
                 <v-card-subtitle class="pa-0 my-2">{{ tour.date }}</v-card-subtitle>
             </v-card-text>
-            <v-card-actions class="d-flex justify-center bg-red-lighten-1 pa-0">
-                <router-link :to="{name:'travelblogdetail', params:{id:tour.id}}" class="text-body-1 font-weight-bold text-decoration-none text-white">
+            <v-card-actions class="d-flex justify-center  pa-0">
+                <router-link :to="{name:'travelblogdetail', params:{id:tour.id}}" class=" text-decoration-none text-red">
                     view detail
                 </router-link>
             </v-card-actions>

@@ -54,20 +54,20 @@ const routes = [
                 component: () => import(/* webpackChunkName: "hotel" */ '../views/Hotel.vue')
             },
             {
-                path:'fullhotelview',
-                name:'fullhotelview',
-                component: () => import(/* webpackChunkName: "fullhotelview" */ '../views/FullHotelVIew.vue')
+                path:'fullhotel/:id',
+                name:'fullhotel',
+                component: () => import(/* webpackChunkName: "fullhotel" */ '../views/FullHotelView.vue')
             },
-            {
-                path:'hotel/:id',
-                name:'hoteldetails',
-                component: () => import(/* webpackChunkName: "hoteldetails" */ '../components/HotelDetails.vue')
-            },
-            {
-                path:'hotel/id/:room_id',
-                name:'roomdetails',
-                component: () => import(/* webpackChunkName: "roomdetails" */ '../components/RoomDetails.vue')
-            },
+            // {
+            //     path:'hotel/:id',
+            //     name:'hoteldetails',
+            //     component: () => import(/* webpackChunkName: "hoteldetails" */ '../components/HotelDetails.vue')
+            // },
+            // {
+            //     path:'hotel/id/:room_id',
+            //     name:'roomdetails',
+            //     component: () => import(/* webpackChunkName: "roomdetails" */ '../components/RoomDetails.vue')
+            // },
         ]
     }
 ];

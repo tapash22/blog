@@ -1,13 +1,9 @@
 <template>
     <v-carousel height="400" hide-delimiters progress="primary">
-        <v-carousel-item v-for="(slide, i) in slides" :key="i">
-            <v-sheet height="100%" :color="colors[i]">
-                <div class="d-flex fill-height justify-center align-center">
-                    <div class="text-h2">
-                        {{ slide }} Division
-                    </div>
-                </div>
-            </v-sheet>
+        <v-carousel-item v-for="slide in slides" :key="slide.id" :src="slide.image" cover>
+           <div v-if="slide.name" class="d-flex justify-center h-100 align-end ">
+            <p class="text-h4 font-weight-bold text-green text-uppercase pa-5 bg-white-lighten-1 rounded-xl ">{{ slide.name}}</p>
+           </div>
         </v-carousel-item>
     </v-carousel>
 
@@ -15,26 +11,8 @@
 
 <script>
 export default {
-    name: 'slider',
-
-    data() {
-        return {
-            slides: [
-                'Dhake',
-                'Chattogong',
-                'Rajshahi',
-                'Khulna',
-                'Sylhet',
-            ],
-            colors: [
-                'red',
-                'blue',
-                'green',
-                'yellow',
-                'orange'
-            ]
-        }
-    }
+    name: 'the-slider',
+    props:['slides']
 
 }
 </script>
