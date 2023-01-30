@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name:'hotel-room-facelites',
+    name:'hotel-room-facelities',
     props:['lists']
 }
 </script>
