@@ -19,7 +19,7 @@
 
         <v-row class="w-100 d-flex justify-center my-2">
             <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="index in countLength" :key="index">
-                <TourDetails :tour="tours[index - 1]" />
+                <TourDetails :tours="tours[index - 1]" />
             </v-col>
         </v-row>
         <!-- end tour -->

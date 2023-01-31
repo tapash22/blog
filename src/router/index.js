@@ -13,18 +13,19 @@ const routes = [
                 name:'home',
                 component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue')
             },
+            // {
+            //     path:'homeview',
+            //     name:'homeview',
+            //     component: () => import(/* webpackChunkName: "homeview" */ '../views/test/HomeView.vue')
+            // },
             {
                 path:'travelblog',
                 name:'travel-blog',
                 component: () => import(/* webpackChunkName: "travelblog" */ '../views/TravelBlog.vue')
             },
+          
             {
-                path:'homeview',
-                name:'homeview',
-                component: () => import(/* webpackChunkName: "homeview" */ '../views/test/HomeView.vue')
-            },
-            {
-                path:'travelblog/:id',
+                path:'travelblogdetail/:id',
                 name:'travelblogdetail',
                 component: () => import(/* webpackChunkName: "travelblog" */ '../views/TravelBlogDetail.vue')
             },

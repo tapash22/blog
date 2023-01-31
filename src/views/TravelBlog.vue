@@ -7,7 +7,7 @@
             </v-sheet>
             <v-row class="d-flex my-2">
                 <v-col cols="12" lg="4" md="4" sm="6" xl="4" v-for="tour in tours" :key="tour.id">
-                   <TourDetails :tour="tour" />
+                   <TourDetails :tours="tour" />
                 </v-col>
             </v-row>
         </v-container>
