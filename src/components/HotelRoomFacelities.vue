@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 .list{
     display: grid;
     grid-template-columns: 1fr ;

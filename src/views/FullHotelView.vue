@@ -4,13 +4,13 @@
         <v-row>
             <v-col cols="12" sm="12" md="12" lg="12" xl="12">
                 <v-card>
-                    <v-card-text class="card-header">
+                    <v-card-text class="card-header bg-red-lighten-5">
                         <div class="first">
                             <v-img :src="hotels.image" height="420" cover />
                         </div>
 
                         <div class="second">
-                            <v-img :src="hotels.image" height="200" cover />
+                            <v-img :src="hotels.image" height="200" cover class="rounded" />
                             <v-img :src="hotels.image" height="200" cover />
                             <v-img :src="hotels.image" height="200" cover />
                             <v-img :src="hotels.image" height="200" cover />
@@ -38,46 +38,50 @@
         <v-row>
             <v-col cols="12" sm="12" md="8" lg="8" xl="8">
                 <v-card>
-                    <v-card-text class="outlined" >
+                    <!-- <v-card-text class="outlined" >
                         <v-card-title class="text-h6 font-weight-bold">
-                            About this Hotel
+                            About of Hotel
                         </v-card-title>
                         <HotelRoomFacelities :lists="hotels.lists" />
-                    </v-card-text>
+                    </v-card-text> -->
 
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">
                             Full Description
                         </v-card-title>
-                        <p class="pa-5">
+                        <p class="mx-5">
                             {{ text }}
                         </p>
                     </v-card-text>
 
-                    <v-card-text>
-                        <v-card-title>What to Expect</v-card-title>
-                        show room view
+                    <v-card-text style="height:250px;">
+                        <v-card-title class="text-h6 font-weight-bold">What to Expect</v-card-title>
+                        <SwiperSlider />
                     </v-card-text>
 
                     <v-card-text>
-                        <v-card-title>Amenities</v-card-title>
+                        <v-card-title class="text-h6 font-weight-bold">Amenities</v-card-title>
                         <HotelRoomFacelities :lists="hotels.lists" />
                     </v-card-text>
 
                     <v-card-text>
-                        <v-card-title>Property Information</v-card-title>
-                        <p class="pa-5">
+                        <v-card-title class="text-h6 font-weight-bold">Property Information</v-card-title>
+                        <p class="mx-5">
                             {{ text }}
                         </p>
                     </v-card-text>
+
                     <v-card-text>
-                        <v-card-title>Rooms and package</v-card-title>
-                        room details
+                        <v-card-title class="text-h6 font-weight-bold">Rooms and package</v-card-title>
+                        <div >
+                            <HotelRoom />
+                        </div>
+
                     </v-card-text>
 
                     <v-card-text>
-                        <v-card-title>Asked Question</v-card-title>
-                        Question
+                        <v-card-title class="text-h6 font-weight-bold">Asked Question</v-card-title>
+                        <HotelInformation />
                     </v-card-text>
                 </v-card>
             </v-col>
@@ -85,7 +89,8 @@
                 <v-card>
                     <v-card-text class="d-flex justify-space-between">
                         <v-card-subtitle class="text-body-1">From <span class="text-h6 font-weight-bold mx-1 text-black">9,999</span>(per night)</v-card-subtitle>
-                        <v-card-title class="text-body-2">(4)<v-icon color="orange" size="20">mdi-star</v-icon></v-card-title>
+                        <v-card-title class="text-body-2">(4)<v-icon color="orange" size="20">mdi-star</v-icon>
+                        </v-card-title>
                     </v-card-text>
                     <v-card-text class="d-flex justify-center">
                         make data calender
@@ -104,6 +109,9 @@
 <script>
 // import HotelRoomView from '../components/HotelRoomView.vue';
 import HotelRoomFacelities from '../components/HotelRoomFacelities.vue';
+import SwiperSlider from '../components/SwiperSlider.vue';
+import HotelRoom from '../components/HotelRoom.vue';
+import HotelInformation from '../components/HotelInformation.vue';
 import {
     mapGetters
 } from 'vuex';
@@ -112,24 +120,25 @@ export default {
     name: 'fullhotel',
     data() {
         return {
-            rating:4,
+            rating: 4,
             heart: false,
             show: false,
             id: this.$route.params.id,
-            text: 'distinctio quo a dolore illo dolorum at quae. Vitae,tenetur. Aut atque repellendus quaerat architecto explicabo fugit quibusdam similique enim dolorem, asperiores nemo vero laudantium eius repudiandae harum tenetur labore qui animi. Earum id alias culpa.Fuga est cum possimus odit, recusandae ratione tenetur incidunt quisquam autem ipsam? Maiores sequi quo accusamus amet nesciunt, dolore deserunt libero similique atque ratione tempora non nemo cum nulla commodi? Dolore quidem itaque non quas dolorum, harum corrupti iusto?'
+            text: 'distinctio quo a dolore illo dolorum at quae. Vitae,tenetur. Aut atque repellendus quaerat architecto explicabo fugit quibusdam similique enim dolorem, asperiores nemo vero laudantium eius repudiandae harum tenetur labore qui animi. Earum id alias culpa.Fuga est cum possimus odit, recusandae ratione tenetur incidunt quisquam autem ipsam? Maiores sequi quo accusamus amet nesciunt, dolore deserunt libero similique atque ratione tempora non nemo cum nulla commodi? Dolore quidem itaque non quas dolorum, harum corrupti iusto?',
+
         }
 
     },
 
-    filters: {
-        truncate: function (text, length, suffix) {
-            if (text.length > length) {
-                return text.substring(0, length) + suffix;
-            } else {
-                return text;
-            }
-        },
-    },
+    // filters: {
+    //     truncate: function (text, length, suffix) {
+    //         if (text.length > length) {
+    //             return text.substring(0, length) + suffix;
+    //         } else {
+    //             return text;
+    //         }
+    //     },
+    // },
 
     computed: {
         hotels() {
@@ -144,7 +153,10 @@ export default {
 
     components: {
         // HotelRoomView
-        HotelRoomFacelities
+        HotelRoomFacelities,
+        SwiperSlider,
+        HotelRoom,
+        HotelInformation
     }
 }
 </script>
