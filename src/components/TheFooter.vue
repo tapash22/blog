@@ -103,5 +103,6 @@ export default {
 <style scoped>
 .list {
     background: transparent !important;
+    display: block;
 }
 </style>

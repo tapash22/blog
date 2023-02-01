@@ -243,7 +243,28 @@ export default {
             "https://i.ibb.co/vh8FDh1/francesca-saraco-d-S27-XGg-Ry-Q-unsplash.jpg",
           rating: 4,
           price: 44,
-          lists: ["Breakfast", "Room Service", "Gym", "Swimming Pool"],
+          lists: [
+            {
+              id: 1,
+              name: "Free Wifi",
+              icon: "mdi-wifi",
+            },
+            {
+              id: 2,
+              name: "Breakfast, Lunch, Dinner",
+              icon: "mdi-food-variant",
+            },
+            {
+              id: 3,
+              name: "Amenities : Swimming Pool",
+              icon: "mdi-pool",
+            },
+            {
+              id: 4,
+              name: "Hot & cold Water",
+              icon: "mdi-fire",
+            },
+          ],
           hotel_rooms: [
             {
               id: 1,
@@ -454,7 +475,28 @@ export default {
             "https://i.ibb.co/DpFvPNR/edvin-johansson-rlw-E8f8an-Oc-unsplash.jpg",
           rating: 4,
           price: 44,
-          lists: ["Breakfast", "Room Service", "Gym", "Swimming Pool"],
+          lists: [
+            {
+              id: 1,
+              name: "Free Wifi",
+              icon: "mdi-wifi",
+            },
+            {
+              id: 2,
+              name: "Breakfast, Lunch, Dinner",
+              icon: "mdi-food-variant",
+            },
+            {
+              id: 3,
+              name: "Amenities : Swimming Pool",
+              icon: "mdi-pool",
+            },
+            {
+              id: 4,
+              name: "Hot & cold Water",
+              icon: "mdi-fire",
+            },
+          ],
           hotel_rooms: [
             {
               id: 1,
@@ -665,7 +707,28 @@ export default {
             "https://i.ibb.co/BVHRxz3/ciudad-maderas-MXb-M1-Nr-Rqt-I-unsplash.jpg",
           price: 44,
           rating: 4,
-          lists: ["Breakfast", "Room Service", "Gym", "Swimming Pool"],
+          lists: [
+            {
+              id: 1,
+              name: "Free Wifi",
+              icon: "mdi-wifi",
+            },
+            {
+              id: 2,
+              name: "Breakfast, Lunch, Dinner",
+              icon: "mdi-food-variant",
+            },
+            {
+              id: 3,
+              name: "Amenities : Swimming Pool",
+              icon: "mdi-pool",
+            },
+            {
+              id: 4,
+              name: "Hot & cold Water",
+              icon: "mdi-fire",
+            },
+          ],
           hotel_rooms: [
             {
               id: 1,
@@ -876,7 +939,28 @@ export default {
             "https://i.ibb.co/kg6nZ25/qui-nguyen-gi-L2f-HNr3-Lc-unsplash.jpg",
           price: 44,
           rating: 4,
-          lists: ["Breakfast", "Room Service", "Gym", "Swimming Pool"],
+          lists: [
+            {
+              id: 1,
+              name: "Free Wifi",
+              icon: "mdi-wifi",
+            },
+            {
+              id: 2,
+              name: "Breakfast, Lunch, Dinner",
+              icon: "mdi-food-variant",
+            },
+            {
+              id: 3,
+              name: "Amenities : Swimming Pool",
+              icon: "mdi-pool",
+            },
+            {
+              id: 4,
+              name: "Hot & cold Water",
+              icon: "mdi-fire",
+            },
+          ],
         },
         {
           id: 6,
@@ -885,7 +969,28 @@ export default {
             "https://i.ibb.co/DpFvPNR/edvin-johansson-rlw-E8f8an-Oc-unsplash.jpg",
           rating: 4,
           price: 44,
-          lists: ["Breakfast", "Room Service", "Gym", "Swimming Pool"],
+          lists: [
+            {
+              id: 1,
+              name: "Free Wifi",
+              icon: "mdi-wifi",
+            },
+            {
+              id: 2,
+              name: "Breakfast, Lunch, Dinner",
+              icon: "mdi-food-variant",
+            },
+            {
+              id: 3,
+              name: "Amenities : Swimming Pool",
+              icon: "mdi-pool",
+            },
+            {
+              id: 4,
+              name: "Hot & cold Water",
+              icon: "mdi-fire",
+            },
+          ],
         },
         {
           id: 7,
@@ -894,7 +999,28 @@ export default {
             "https://i.ibb.co/vh8FDh1/francesca-saraco-d-S27-XGg-Ry-Q-unsplash.jpg",
           price: 44,
           rating: 4,
-          lists: ["Breakfast", "Room Service", "Gym", "Swimming Pool"],
+          lists: [
+            {
+              id: 1,
+              name: "Free Wifi",
+              icon: "mdi-wifi",
+            },
+            {
+              id: 2,
+              name: "Breakfast, Lunch, Dinner",
+              icon: "mdi-food-variant",
+            },
+            {
+              id: 3,
+              name: "Amenities : Swimming Pool",
+              icon: "mdi-pool",
+            },
+            {
+              id: 4,
+              name: "Hot & cold Water",
+              icon: "mdi-fire",
+            },
+          ],
         },
         {
           id: 8,
@@ -903,7 +1029,28 @@ export default {
             "https://i.ibb.co/BVHRxz3/ciudad-maderas-MXb-M1-Nr-Rqt-I-unsplash.jpg",
           rating: 4,
           price: 44,
-          lists: ["Breakfast", "Room Service", "Gym", "Swimming Pool"],
+          lists: [
+            {
+              id: 1,
+              name: "Free Wifi",
+              icon: "mdi-wifi",
+            },
+            {
+              id: 2,
+              name: "Breakfast, Lunch, Dinner",
+              icon: "mdi-food-variant",
+            },
+            {
+              id: 3,
+              name: "Amenities : Swimming Pool",
+              icon: "mdi-pool",
+            },
+            {
+              id: 4,
+              name: "Hot & cold Water",
+              icon: "mdi-fire",
+            },
+          ],
         },
       ],
     };
