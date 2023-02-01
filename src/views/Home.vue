@@ -2,7 +2,7 @@
 <div class="home">
     <v-row class="pa-0 ma-0">
         <v-col cols="12" lg="12" md="12" xl="12">
-            <TheSlider :slides="slides"/>
+           <TheHeader />
         </v-col>
     </v-row>
     <v-container>
@@ -64,6 +64,7 @@ import GlobalSearch from '../components/GlobalSearch.vue';
 import TheSlider from '../components/TheSlider.vue';
 import PackageDetails from '../components/PackageDetails.vue';
 import TourDetails from '../components/TourDetails.vue';
+import TheHeader from '../components/TheHeader.vue';
 // import MakeStarDynamic from '../components/MakeStarDynamic.vue';
 
 import {
@@ -124,6 +125,7 @@ export default {
         TourDetails,
         PackageDetails,
         GlobalSearch,
+        TheHeader
         // MakeStarDynamic for dynamic star
     },
 
