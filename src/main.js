@@ -8,4 +8,4 @@ import vuetify from './plugins/vuetify'
 // import 'video.js/dist/video-js.css'
 
 
-createApp(App).use(router).use(store).use(vuetify).mount('#app')
+createApp(App).use(router).use(store).use(vuetify).mount('#app');

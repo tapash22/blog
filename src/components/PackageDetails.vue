@@ -22,7 +22,7 @@
             </v-card-text>
 
             <v-card-actions class="d-flex justify-center bg-red-lighten-1 pa-0">
-                <router-link :to="packages.link" class="text-body-1 font-weight-bold text-decoration-none text-white">
+                <router-link :to="packages.link" class="text-body-2 text-decoration-none text-white">
                     Details
                 </router-link>
             </v-card-actions>
