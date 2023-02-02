@@ -62,9 +62,9 @@
 <script>
 import GlobalSearch from '../components/GlobalSearch.vue';
 import TheSlider from '../components/TheSlider.vue';
-import PackageDetails from '../components/PackageDetails.vue';
+import PackageDetails from '../components/package/PackageDetails.vue';
 import TourDetails from '../components/TourDetails.vue';
-import TheHeader from '../components/TheHeader.vue';
+import TheHeader from '../components/main/TheHeader.vue';
 // import MakeStarDynamic from '../components/MakeStarDynamic.vue';
 
 import {
@@ -80,24 +80,6 @@ export default {
             interval: {},
             value: 0,
             icons: true,
-
-            slides: [
-                {
-                    id:1,
-                    image:'https://i.ibb.co/jW01ftb/dino-reichmuth-A5r-CN8626-Ck-unsplash-1200x400.jpg',
-                    name:'Dhaka',
-                },
-                {
-                    id:2,
-                    image:'https://i.ibb.co/t20S98b/2.jpg',
-                    name:'Chattogong',
-                },
-                {
-                    id:3,
-                    image:'https://i.ibb.co/Q6yNhfq/3.jpg',
-                    name:'Khulna',
-                },
-            ]
         }
     },
 

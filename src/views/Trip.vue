@@ -20,7 +20,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import SingelHotel from '../components/SingelHotel.vue';
+import SingelHotel from '../components/hotel/SingelHotel.vue';
 
 export default {
     name: 'trip',

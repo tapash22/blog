@@ -23,8 +23,8 @@
 </template>
 
 <script>
-import TheNavigation from '../components/TheNavigation.vue';
-import TheFooter from '../components/TheFooter.vue';
+import TheNavigation from '../components/main/TheNavigation.vue';
+import TheFooter from '../components/main/TheFooter.vue';
 import ChatPage from '../components/ChatPage.vue';
 
 export default {

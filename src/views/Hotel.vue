@@ -15,8 +15,8 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex';
-import FilterView from '../components/FilterView.vue';
-import SingelHotel from '../components/SingelHotel.vue';
+import FilterView from '../components/hotel/FilterView.vue';
+import SingelHotel from '../components/hotel/SingelHotel.vue';
 
 export default {
     name: 'hotel',

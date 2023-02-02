@@ -38,25 +38,14 @@
         <v-row>
             <v-col cols="12" sm="12" md="8" lg="8" xl="8">
                 <v-card>
-                    <!-- <v-card-text class="outlined" >
-                        <v-card-title class="text-h6 font-weight-bold">
-                            About of Hotel
-                        </v-card-title>
-                        <HotelRoomFacelities :lists="hotels.lists" />
-                    </v-card-text> -->
 
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">
                             Full Description
                         </v-card-title>
                         <p class="mx-5">
-                            {{ text }}
+                            {{ hotels.des }}
                         </p>
-                    </v-card-text>
-
-                    <v-card-text style="height:250px;">
-                        <v-card-title class="text-h6 font-weight-bold">What to Expect</v-card-title>
-                        <SwiperSlider />
                     </v-card-text>
 
                     <v-card-text>
@@ -64,40 +53,47 @@
                         <HotelRoomFacelities :lists="hotels.lists" />
                     </v-card-text>
 
+                    <v-card-text style="height:250px;">
+                        <v-card-title class="text-h6 font-weight-bold">What to Expect</v-card-title>
+                        <SwiperSlider :images="hotels.images_view"/>
+                    </v-card-text>
+
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">Property Information</v-card-title>
                         <p class="mx-5">
-                            {{ text }}
+                            {{ hotels.info }}
                         </p>
                     </v-card-text>
 
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">Rooms and package</v-card-title>
-                        <div >
-                            <HotelRoom />
+                        <div>
+                            <HotelRoom :hotel_rooms=" hotels.hotel_rooms"/>
                         </div>
 
                     </v-card-text>
 
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">Asked Question</v-card-title>
-                        <HotelInformation />
+                        <HotelInformation :questions="hotels.questions"/>
                     </v-card-text>
+
                 </v-card>
             </v-col>
-            <v-col cols="12" sm="12" md="4" lg="4" xl="4">
-                <v-card>
+
+            <v-col cols="12" sm="12" md="4" lg="4" xl="4" class="box">
+                <v-card class="card">
                     <v-card-text class="d-flex justify-space-between">
                         <v-card-subtitle class="text-body-1">From <span class="text-h6 font-weight-bold mx-1 text-black">9,999</span>(per night)</v-card-subtitle>
                         <v-card-title class="text-body-2">(4)<v-icon color="orange" size="20">mdi-star</v-icon>
                         </v-card-title>
                     </v-card-text>
                     <v-card-text class="d-flex justify-center">
-                        make data calender
+                      <GlobalSearch />
                     </v-card-text>
-                    <v-card-actions class="d-flex justify-center">
+                    <!-- <v-card-actions class="d-flex justify-center">
                         <v-btn rounded="xl" elevation="1" class="bg-green">check Availablity</v-btn>
-                    </v-card-actions>
+                    </v-card-actions> -->
                 </v-card>
             </v-col>
         </v-row>
@@ -108,10 +104,13 @@
 
 <script>
 // import HotelRoomView from '../components/HotelRoomView.vue';
-import HotelRoomFacelities from '../components/HotelRoomFacelities.vue';
-import SwiperSlider from '../components/SwiperSlider.vue';
-import HotelRoom from '../components/HotelRoom.vue';
-import HotelInformation from '../components/HotelInformation.vue';
+import HotelRoomFacelities from '../components/hotel/HotelRoomFacelities.vue';
+import SwiperSlider from '../components/slider/SwiperSlider.vue';
+import HotelRoom from '../components/hotel/HotelRoom.vue';
+import HotelInformation from '../components/hotel/HotelInformation.vue';
+
+import GlobalSearch from '../components/GlobalSearch.vue';
+
 import {
     mapGetters
 } from 'vuex';
@@ -120,6 +119,7 @@ export default {
     name: 'fullhotel',
     data() {
         return {
+            date:'',
             rating: 4,
             heart: false,
             show: false,
@@ -156,12 +156,14 @@ export default {
         HotelRoomFacelities,
         SwiperSlider,
         HotelRoom,
-        HotelInformation
+        HotelInformation,
+        GlobalSearch
     }
 }
 </script>
 
 <style scoped>
+
 .card-header {
     display: grid;
     grid-template-columns: 1fr 2fr;
