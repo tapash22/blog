@@ -4,8 +4,8 @@
         <!-- <h2 class="text-h6 font-weight-bold text-uppercase my-2 text-center">Transport</h2> -->
         <v-row>
             <v-col cols="12" sm="12" lg="12" md="12" xl="12" class="d-flex justify-center">
-                <v-sheet rounded="xl" elevation="5" color="red-lighten-1" class="my-5 w-100">
-                    <h2 class="d-flex justify-center my-5 text-uppercase text-h6 font-weight-bold ">Select your transport</h2>
+                <v-sheet rounded="xl" elevation="5" color="" class="my-5 w-100">
+                    <h2 class="d-flex justify-center my-5 pa-3 text-uppercase text-h6 font-weight-bold bg-red-lighten-1 ">Select your Destination</h2>
                     <div class="date">
                         <Datepicker  v-model="transpost_info.date" :close-on-auto-apply="true" week-start="0" :auto-position="true" class="my-1 pa-2" placeholder="select date"></Datepicker>
                     </div>
