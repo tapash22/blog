@@ -94,7 +94,7 @@ export default {
       ],
 
       transpost_info: {
-        date: "",
+        date: new Date(),
         times: ["9:00 pm", "10:00 pm", "11:00 pm"],
         place: [
           "Dhaka",
@@ -105,13 +105,10 @@ export default {
           "Khulna",
           "Rongpur",
         ],
-        transport:[
-          'Green Line',
-          'Shohagh',
-          'Unique',
-          'Sentmartin'
-        ]
+
+        transport: ["Green Line", "Shohagh", "Unique", "Sentmartin"],
       },
+
       transports: [
         {
           id: 1,
@@ -196,7 +193,10 @@ export default {
       ],
     };
   },
+
   mutations: {},
+
   getters: {},
+
   actions: {},
 };

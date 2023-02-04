@@ -1,9 +1,8 @@
 <template>
-    <div class="bus">
-        <v-container>
-            <h2 class="text-h5 my-5 text-center">Bus Transport</h2>
-            <v-row class="d-flex justify-center">
-                <v-col cols="12" sm="12" lg="6" md="6" xl="6" class="d-flex justify-center">
+    <div class="single-bus">
+      <v-container>
+        <v-row class="d-flex justify-center ">
+                <v-col cols="12" sm="12" lg="8" md="8" xl="8" class="d-flex justify-center">
 
                     <v-card class="d-block w-100" elevation="10" rounded="lg">
                         <v-card-title class="my-5 text-center bg-red white--text">Dhake to cox-bazer(AC)</v-card-title>
@@ -29,7 +28,7 @@
                     </v-card>
                 </v-col>
 
-                <v-col cols="12" sm="6" md="3" lg="3" xl="3" class="my-5">
+                <v-col cols="12" sm="12" md="4" lg="4" xl="4" class="my-5">
                     <v-card elevation="10" class="mt-2" rounded="xl">
                         <v-card-title class="text-center my-5"> Amount</v-card-title>
                         <v-card-text class="bg-red-darken-2 d-flex  pt-10 ">
@@ -64,7 +63,8 @@
                     </v-card>
                 </v-col>
             </v-row>
-        </v-container>
+      </v-container>
+          
     </div>
 </template>
 
@@ -72,7 +72,7 @@
 import { mapState } from 'vuex';
 
 export default {
-    name: 'bus',
+    name: 'single-bus',
     data() {
         return {
             price: 1500,
@@ -120,3 +120,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.single-bus{
+    width: 100%;
+}
+</style>

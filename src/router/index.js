@@ -44,11 +44,11 @@ const routes = [
                 name:'transport',
                 component: () => import(/* webpackChunkName: "transport" */ '../views/Transport.vue')
             },
-            {
-                path:'bus',
-                name:'bus',
-                component: () => import(/* webpackChunkName: "bus" */ '../views/Bus.vue')
-            },
+            // {
+            //     path:'bus',
+            //     name:'bus',
+            //     component: () => import(/* webpackChunkName: "bus" */ '../views/Bus.vue')
+            // },
             {
                 path:'hotel',
                 name:'hotel',
