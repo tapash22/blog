@@ -35,24 +35,9 @@
 
             <v-col cols="12" md="4" lg="4" xl="4" sm="12" class=" d-flex justify-center">
                 <v-img src="https://i.ibb.co/vP60CQb/10476-removebg-preview.png" width="90%" />
-                <!-- <v-sheet elevation="10" class="my-5 mx-auto pa-5 d-flex justify-space-between" rounded="xl">
-                    <v-progress-circular :rotate="360" :size="120" :width="10" :model-value="value" color="red" class=" my-2">
-                        {{ value }}
-                    </v-progress-circular>
-                    <p class="text-body-1 text-center pa-5 my-5 align-center">
-                        You can choose any package, what do you want!
-                    </p>
-
-                </v-sheet> -->
             </v-col>
         </v-row>
-        <!-- <v-row>
-            <v-col>
-                <MakeStarDynamic />
-            </v-col>
-        </v-row> -->
-
-        <!-- end packages -->
+         <!--end packages  -->
     </v-container>
 
 
@@ -60,7 +45,7 @@
 </template>
 
 <script>
-import GlobalSearch from '../components/GlobalSearch.vue';
+import GlobalSearch from '../components/main/GlobalSearch.vue';
 import TheSlider from '../components/TheSlider.vue';
 import PackageDetails from '../components/package/PackageDetails.vue';
 import TourDetails from '../components/TourDetails.vue';

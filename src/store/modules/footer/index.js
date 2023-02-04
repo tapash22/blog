@@ -3,7 +3,7 @@ export default {
 
   state() {
     return {
-      icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+      icons: ["mdi-facebook", "mdi-twitter", "mdi-instagram"],
       lists: [
         {
           id: 1,

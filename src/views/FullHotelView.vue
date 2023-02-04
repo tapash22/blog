@@ -109,7 +109,7 @@ import SwiperSlider from '../components/slider/SwiperSlider.vue';
 import HotelRoom from '../components/hotel/HotelRoom.vue';
 import HotelInformation from '../components/hotel/HotelInformation.vue';
 
-import GlobalSearch from '../components/GlobalSearch.vue';
+import GlobalSearch from '../components/main/GlobalSearch.vue';
 
 import {
     mapGetters

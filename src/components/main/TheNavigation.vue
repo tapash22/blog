@@ -15,7 +15,7 @@
                 <MIniCard :item="item "/>
              
             </v-menu>
-            <v-app-bar-nav-icon class="text-red" @click="drawer = !drawer"></v-app-bar-nav-icon>
+            <!-- <v-app-bar-nav-icon class="text-red" @click="drawer = !drawer"></v-app-bar-nav-icon> -->
         </v-app-bar>
     </div>
 </template>
@@ -25,11 +25,11 @@ import { mapState } from 'vuex';
 import MIniCard from './MIniCard.vue';
 export default {
     name: 'TheNavigation',
-    data() {
-        return {
-            drawer: false,
-        }
-    },
+    // data() {
+    //     return {
+    //         drawer: false,
+    //     }
+    // },
 
     components: {
         MIniCard,

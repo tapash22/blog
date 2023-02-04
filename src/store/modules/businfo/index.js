@@ -92,71 +92,103 @@ export default {
           time: "10.00",
         },
       ],
+
+      transpost_info: {
+        date: "",
+        times: ["9:00 pm", "10:00 pm", "11:00 pm"],
+        place: [
+          "Dhaka",
+          "Chittogong",
+          "Sylhet",
+          "Rajsahi",
+          "Borishal",
+          "Khulna",
+          "Rongpur",
+        ],
+        transport:[
+          'Green Line',
+          'Shohagh',
+          'Unique',
+          'Sentmartin'
+        ]
+      },
       transports: [
         {
           id: 1,
-          name: "poribohon",
+          name: "Green Line",
+          place: ["dhake", "rajsahi", "sylhet", "borisal", "khulna"],
+          date: "",
+          time: "",
           image: "",
           buses: [
             {
               id: 1,
-              features: "AC",
+              features: "Scania",
               price: 1500,
             },
             {
               id: 2,
-              features: "Non AC",
+              features: "Volvo",
               price: 1000,
             },
           ],
         },
         {
           id: 2,
-          name: "poribohon",
+          name: "Shohagh",
+          place: ["dhake", "rajsahi", "sylhet", "borisal", "khulna"],
+          date: "",
+          time: "",
           image: "",
           buses: [
             {
               id: 1,
-              features: "AC",
+              features: "Scania",
               price: 1500,
             },
             {
               id: 2,
-              features: "Non AC",
+              features: "Volvo",
               price: 1000,
             },
           ],
         },
         {
           id: 3,
-          name: "poribohon",
+          name: "Unique",
+          place: ["dhake", "rajsahi", "sylhet", "borisal", "khulna"],
+          date: "",
+          time: "",
           image: "",
           buses: [
             {
               id: 1,
-              features: "AC",
+              features: "Scania",
               price: 1500,
             },
             {
               id: 2,
-              features: "Non AC",
+              features: "Volvo",
               price: 1000,
             },
           ],
         },
         {
           id: 4,
-          name: "poribohon",
+          name: "Sentmartin",
+          place: ["dhake", "rajsahi", "sylhet", "borisal", "khulna"],
+          date: "",
+          time: "",
           image: "",
           buses: [
             {
               id: 1,
-              features: "AC",
+              features: "Scania",
               price: 1500,
             },
             {
               id: 2,
-              features: "Non AC",
+              features: "Volvo",
               price: 1000,
             },
           ],

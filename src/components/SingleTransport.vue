@@ -1,7 +1,7 @@
 <template>
     <div class="single-transport">
         <v-card elevation="5">
-            <v-img class="w-100 h-50 pa-2" src="../assets/bus.png" alt="bus"></v-img>
+            <v-img class="pa-2" height="250" cover src="https://i.ibb.co/5R63kBv/g.png" alt="bus"></v-img>
             <v-card-title class="text-body-1 font-weight-bold text-uppercase pa-0 my-2 mx-2 ">{{ transport.name }}</v-card-title>
 
             <v-card-text class="my-2 w-100 h-100 d-flex pa-0">
