@@ -77,6 +77,7 @@ export default {
         return {
             price: 1500,
             clicked: true,
+            sitlist:[],
         }
     },
     computed:{
