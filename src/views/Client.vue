@@ -1,25 +1,26 @@
 <template>
-    <div class="client">
+<div class="client">
 
-        <TheNavigation />
+    <TheNavigation />
 
-        <v-main>
-            <router-view />
-            <div style="position:fixed;right:20px;bottom:50px;">
-                <v-menu v-model="menu" :close-on-content-click="false" location="end">
-                    <template v-slot:activator="{ props }">
+    <v-main>
+        <router-view />
 
-                        <v-btn icon="mdi-chart-line-variant" color="red" class="text-h6" v-bind="props"></v-btn>
-                    </template>
+    </v-main>
+    <div style="position:sticky;bottom:25%;display:flex;justify-content:right;margin:50px;">
+        <v-menu v-model="menu" :close-on-content-click="false" location="end">
+            <template v-slot:activator="{ props }">
 
-                   <ChatPage />
-                </v-menu>
-                <!--  -->
-            </div>
-        </v-main>
-        <TheFooter />
+                <v-btn icon="mdi-chart-line-variant" color="red" class="text-h6" v-bind="props"></v-btn>
+            </template>
 
+            <ChatPage />
+        </v-menu>
+        <!--  -->
     </div>
+    <TheFooter />
+
+</div>
 </template>
 
 <script>
@@ -32,7 +33,7 @@ export default {
     data() {
         return {
             menu: false,
-            textm:''
+            textm: ''
         }
     },
     components: {

@@ -15,7 +15,7 @@
                 </div>
             </v-col>
 
-            <v-col cols="6" sm="6" md="2" lg="2" xl="2" v-for="list in lists" :key="list.id" class="d-flex justify-center">
+            <v-col cols="12" sm="12" md="2" lg="2" xl="2" v-for="list in lists" :key="list.id" class="d-flex justify-center">
                 <v-list class="list">
                     <v-list-item-title class="text-body-1 font-weight-bold text-white">{{ list.title }}</v-list-item-title>
                     <v-divider color="white"></v-divider>
@@ -29,11 +29,6 @@
                 </v-list>
 
             </v-col>
-
-
-            <!-- <v-col cols="12" sm="12" md="2" lg="2" xl="2" class="d-flex justify-center">
-                <v-img src="https://i.ibb.co/vP60CQb/10476-removebg-preview.png" width="200"/>
-            </v-col> -->
 
             <v-col cols="12" sm="12" lg="3" md="3" xl="3" class="d-flex justify-center align-center">
                 <v-btn v-for="icon in icons" :key="icon" class="mx-1 bg-white mx-smAndDown-3 text-h6" color="red" :icon="icon" size="small"></v-btn>

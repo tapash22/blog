@@ -43,7 +43,7 @@
                         <v-card-title class="text-h6 font-weight-bold">
                             Full Description
                         </v-card-title>
-                        <p class="mx-5">
+                        <p class="mx-5 text-justify">
                             {{ hotels.des }}
                         </p>
                     </v-card-text>
@@ -55,12 +55,12 @@
 
                     <v-card-text style="height:250px;">
                         <v-card-title class="text-h6 font-weight-bold">What to Expect</v-card-title>
-                        <SwiperSlider :images="hotels.images_view"/>
+                        <SwiperSlider :images="hotels.images_view" />
                     </v-card-text>
 
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">Property Information</v-card-title>
-                        <p class="mx-5">
+                        <p class="mx-5 text-justify">
                             {{ hotels.info }}
                         </p>
                     </v-card-text>
@@ -68,20 +68,20 @@
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">Rooms and package</v-card-title>
                         <div>
-                            <HotelRoom :hotel_rooms=" hotels.hotel_rooms"/>
+                            <HotelRoom :hotel_rooms=" hotels.hotel_rooms" />
                         </div>
 
                     </v-card-text>
 
                     <v-card-text>
                         <v-card-title class="text-h6 font-weight-bold">Asked Question</v-card-title>
-                        <HotelInformation :questions="hotels.questions"/>
+                        <HotelInformation :questions="hotels.questions" />
                     </v-card-text>
 
                 </v-card>
             </v-col>
 
-            <v-col cols="12" sm="12" md="4" lg="4" xl="4" class="box">
+            <v-col cols="12" sm="12" md="4" lg="4" xl="4">
                 <v-card class="card">
                     <v-card-text class="d-flex justify-space-between">
                         <v-card-subtitle class="text-body-1">From <span class="text-h6 font-weight-bold mx-1 text-black">9,999</span>(per night)</v-card-subtitle>
@@ -89,11 +89,9 @@
                         </v-card-title>
                     </v-card-text>
                     <v-card-text class="d-flex justify-center">
-                      <GlobalSearch />
+                        <GlobalSearch />
                     </v-card-text>
-                    <!-- <v-card-actions class="d-flex justify-center">
-                        <v-btn rounded="xl" elevation="1" class="bg-green">check Availablity</v-btn>
-                    </v-card-actions> -->
+
                 </v-card>
             </v-col>
         </v-row>
@@ -119,7 +117,7 @@ export default {
     name: 'fullhotel',
     data() {
         return {
-            date:'',
+            date: '',
             rating: 4,
             heart: false,
             show: false,
@@ -151,8 +149,11 @@ export default {
 
     },
 
+    mounted() {
+        window.scrollTo(0, 0);
+    },
+
     components: {
-        // HotelRoomView
         HotelRoomFacelities,
         SwiperSlider,
         HotelRoom,
@@ -163,7 +164,6 @@ export default {
 </script>
 
 <style scoped>
-
 .card-header {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -176,5 +176,30 @@ export default {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 200px);
     grid-gap: 5px;
+}
+
+.card {
+    position: sticky;
+    top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card-header {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+
+    .card-header .second {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 200px);
+        grid-gap: 5px;
+    }
+
+    .card {
+       display:none;
+    }
 }
 </style>

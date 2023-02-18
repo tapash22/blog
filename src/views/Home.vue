@@ -1,10 +1,10 @@
 <template>
 <div class="home">
-    <v-row class="pa-0 ma-0">
-        <v-col cols="12" lg="12" md="12" xl="12">
+    <!-- <v-row class="pa-0 ma-0">
+        <v-col cols="12" lg="12" md="12" xl="12"> -->
            <TheHeader />
-        </v-col>
-    </v-row>
+        <!-- </v-col>
+    </v-row> -->
     <v-container>
         <v-row class="w-100 d-block pa-0 ma-0">
             <v-col cols="12" lg="12" md="12" sm="12" xl="12" class="d-flex justify-center">
@@ -17,7 +17,7 @@
             <v-btn elevation="6" class="bg-red text-body-1 " @click="viewAll">view all</v-btn>
         </v-sheet>
 
-        <v-row class="w-100 d-flex justify-center my-2">
+        <v-row class=" d-flex justify-center my-2">
             <v-col cols="12" lg="4" md="4" sm="12" xl="4" v-for="index in countLength" :key="index">
                 <TourDetails :tours="tours[index - 1]" />
             </v-col>
@@ -67,15 +67,18 @@ export default {
             icons: true,
         }
     },
-
-    mounted() {
-        this.interval = setInterval(() => {
-            if (this.value === 100) {
-                return (this.value = 0)
-            }
-            this.value += 1
-        }, 100)
+    mounted(){
+        window.scrollTo(0,0);
     },
+
+    // mounted() {
+    //     this.interval = setInterval(() => {
+    //         if (this.value === 100) {
+    //             return (this.value = 0)
+    //         }
+    //         this.value += 1
+    //     }, 100)
+    // },
 
     computed: {
         ...mapState('tour', {

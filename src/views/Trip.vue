@@ -34,6 +34,10 @@ export default {
             hotels: 'hotels'
         })
     },
+
+    mounted(){
+        window.scrollTo(0,0);
+    },
     components:{
         SingelHotel
     }

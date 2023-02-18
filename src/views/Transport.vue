@@ -42,10 +42,10 @@
                 <v-sheet elevation="6" rounded="xl">
                     <h2 class="d-flex justify-center my-5 pa-3 text-uppercase text-h6 font-weight-bold bg-red-lighten-1 ">What to do</h2>
                     <div class="my-3 pa-1 mx-2" v-for="info in infos" :key="info.id">
-                        <h3 class="text-body-1 text-start text-uppercase mx-2">
+                        <h3 class="text-body-1 text-justify text-uppercase mx-2">
                             {{info.title}} :
                         </h3>
-                        <p class=" pa-2 text-body-2 text mx-2">
+                        <p class=" pa-2 text-body-2 text-justify mx-2">
                             {{ info.text }}
                         </p>
                     </div>
@@ -102,6 +102,10 @@ export default {
         ...mapState('buss', {
             transpost_info: 'transpost_info'
         })
+    },
+
+    mounted(){
+        window.scrollTo(0,0);
     },
 
     components: {

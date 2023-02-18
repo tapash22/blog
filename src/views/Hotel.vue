@@ -1,6 +1,6 @@
 <template>
     <div class="hotel">
-        <FilterView />
+        <!-- <FilterView /> -->
         <v-container>
             <h2 class="text-h6 font-weight-bold text-uppercase my-2 text-center">Hotel</h2>
             <v-row>
@@ -15,7 +15,7 @@
 
 <script>
 import { mapGetters, mapState } from 'vuex';
-import FilterView from '../components/hotel/FilterView.vue';
+// import FilterView from '../components/hotel/FilterView.vue';
 import SingelHotel from '../components/hotel/SingelHotel.vue';
 
 export default {
@@ -30,9 +30,12 @@ export default {
         //     getHotel : 'getHotel'
         // })
     },
+    mounted(){
+        window.scrollTo(0,0);
+    },
 
     components: {
-        FilterView,
+        // FilterView,
         SingelHotel
     }
 }
