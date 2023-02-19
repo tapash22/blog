@@ -39,11 +39,23 @@ const routes = [
                 name:'trip',
                 component: () => import(/* webpackChunkName: "trip" */ '../views/Trip.vue')
             },
+            
             {
-                path:'transport',
-                name:'transport',
-                component: () => import(/* webpackChunkName: "transport" */ '../views/Transport.vue')
+                path:'tourpackage',
+                name:'tourpackage',
+                component: () => import(/* webpackChunkName: "tourpackage" */ '../views/TourPackage.vue')
             },
+            {
+                path:'packagedetails/:id',
+                name:'packagedetails',
+                component: () => import(/* webpackChunkName: "packagedetails" */ '../views/PackageDetails.vue')
+            },
+            
+            // {
+            //     path:'transport',
+            //     name:'transport',
+            //     component: () => import(/* webpackChunkName: "transport" */ '../views/Transport.vue')
+            // },
             // {
             //     path:'bus',
             //     name:'bus',

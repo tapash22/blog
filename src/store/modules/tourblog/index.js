@@ -63,10 +63,10 @@ export default {
       packagess: [
         {
           id: 1,
-          name: "Transport",
+          name: "Tour package",
           des: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt,Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt,Doloremque eligendi aut nesciunt dicta eveniet autem, earum quidem deserunt, ",
           icon: "train-car",
-          link: "/transport",
+          link: "/tourpackage",
         },
         {
           id: 2,

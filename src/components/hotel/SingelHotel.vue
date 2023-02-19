@@ -2,7 +2,7 @@
 <div class="single-hotel">
 
     <v-card class="rounded-lg " elevation="10">
-        <v-img :src="hotel.image" height="200" cover />
+        <v-img :src="hotel.image1" height="200" cover />
         <router-link :to="{ name:'fullhotel', params: { id: hotel.id } }" class="text-decoration-none">
             <v-card-title class="text-body-1 font-weight-bold text-black text-uppercase pa-1 my-1">{{ hotel.name }}</v-card-title>
         </router-link>

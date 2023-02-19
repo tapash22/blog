@@ -3,6 +3,7 @@ import HotelInformation from './modules/hotelinfo/index'
 import BusInformation from './modules/businfo/index'
 import TourInformation from './modules/tourblog/index'
 import footerInformation from './modules/footer/index'
+import packageInformation from './modules/packages/index'
 
 
 const store = createStore({
@@ -11,7 +12,8 @@ const store = createStore({
         hotel: HotelInformation,
         buss: BusInformation,
         tour: TourInformation,
-        footer : footerInformation
+        footer : footerInformation,
+        packages : packageInformation
     },
 
 });

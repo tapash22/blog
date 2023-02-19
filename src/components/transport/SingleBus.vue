@@ -17,10 +17,7 @@
                         <v-divider vertical></v-divider>
                         <v-card-text class="d-block ">
                             <div class="d-flex justify-center my-5" v-for="sit in sitRight" :key="sit.id">
-                                <v-btn class="mx-2" @click="onClick(sit.name1)">{{
-                                                sit.name1
-                                        }}</v-btn>
-                                <v-btn class="mx-2" @click="onClick(sit.name2)">{{ sit.name2 }}</v-btn>
+                                <BaseButton :sit="sit" />
                             </div>
                         </v-card-text>
                     </div>
