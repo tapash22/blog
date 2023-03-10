@@ -79,14 +79,14 @@ export default {
         }
     },
     computed: {
-        ...mapState('buss', {
-            tickets: 'tickets',
-            sitLeft: 'sitLeft',
-            sitRight: 'sitRight',
-        })
+        ...mapState([
+            'tickets',
+            'sitLeft',
+            'sitRight',
+        ])
     },
 
-    components:{
+    components: {
         BaseButton,
     }
 
